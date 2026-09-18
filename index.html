@@ -4214,6 +4214,10 @@ async function eliminarMedicion(id){
    LIMPIAR
    ========================================================== */
 
+/* ==========================================================
+   LIMPIAR
+   ========================================================== */
+
 function limpiarFormulario(){
 
   document.querySelectorAll(
@@ -4252,6 +4256,9 @@ function limpiarFormulario(){
   document.getElementById("rDetalle").innerHTML = "";
 
   medicionSeleccionada = null;
+
+  // Restaurar fecha y hora actuales del sistema
+  establecerFechaActual();
 
   actualizarCamposCondicionales();
 
