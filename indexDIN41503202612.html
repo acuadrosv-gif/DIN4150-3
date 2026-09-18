@@ -1,0 +1,6329 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#f8fafc" id="themeMeta">
+
+<title>Control de Vibraciones por Voladuras — DIN 4150-3:2016-12</title>
+
+<!-- GOOGLE FONTS: Plus Jakarta Sans & JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================
+   DYNAMIC LUXURY DESIGN SYSTEM — DIN 4150-3:2016-12 SICONVOL
+   Ultra-Corporate High-Tech Precision Edition
+   Dual-Theme: Platinum Light (Default) & Midnight Obsidian
+   ========================================================== */
+
+/* ─── TEMA CLARO: PLATINUM LUXURY (DEFAULT) ─── */
+:root, [data-theme="light"] {
+  --bg-primary: #f4f6fb;
+  --bg-secondary: #e9eef7;
+  --bg-card: rgba(255, 255, 255, 0.88);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-card-elevated: #ffffff;
+  --bg-input: #ffffff;
+  --bg-input-focus: #ffffff;
+
+  /* Metallic & Vivid Luxury Accents */
+  --gold-primary: #b45309;
+  --gold-light: #f59e0b;
+  --gold-gradient: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #b45309 100%);
+  --gold-glow: rgba(217, 119, 6, 0.2);
+
+  --cyan-electric: #0284c7;
+  --cyan-glow: rgba(2, 132, 199, 0.25);
+  --blue-sapphire: #1d4ed8;
+  --blue-gradient: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+
+  /* Functional Statuses (Vibrant & High Contrast) */
+  --verde: #059669;
+  --verde-bg: #ecfdf5;
+  --verde-border: #a7f3d0;
+  --verde-glow: rgba(16, 185, 129, 0.2);
+
+  --naranja: #d97706;
+  --naranja-bg: #fffbeb;
+  --naranja-border: #fde68a;
+  --naranja-glow: rgba(245, 158, 11, 0.2);
+
+  --rojo: #e11d48;
+  --rojo-bg: #fff1f2;
+  --rojo-border: #fecdd3;
+  --rojo-glow: rgba(225, 29, 72, 0.2);
+
+  --morado: #7c3aed;
+  --morado-claro: #a78bfa;
+  --morado-bg: #f5f3ff;
+
+  --azul: #0284c7;
+  --azul2: #2563eb;
+  --azul3: #e0f2fe;
+
+  /* Typography & High-Contrast Neutrals */
+  --text-main: #0f172a;
+  --text-heading: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --gris: #64748b;
+  --gris2: #f1f5f9;
+
+  /* Borders & Glassmorphic Elevation */
+  --borde: #cbd5e1;
+  --borde-light: #e2e8f0;
+  --borde-focus: #2563eb;
+  --blanco: #ffffff;
+
+  /* Volumetric 3D Shadows */
+  --sombra: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  --sombra-card: 0 14px 35px -6px rgba(15, 23, 42, 0.07), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  --sombra-glow: 0 0 25px rgba(37, 99, 235, 0.15);
+
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --header-border: rgba(226, 232, 240, 0.9);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --nav-active-bg: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  --nav-active-color: #ffffff;
+  --nav-btn-color: #334155;
+  --nav-btn-hover: #f1f5f9;
+
+  --metric-bg: #f8fafc;
+  --metric-border: #e2e8f0;
+  --metric-value-color: #0f172a;
+
+  --th-bg: #f1f5f9;
+  --tr-hover: rgba(2, 132, 199, 0.05);
+
+  --body-bg-gradient: 
+    radial-gradient(circle at 10% 10%, rgba(2, 132, 199, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(217, 119, 6, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f8 50%, #f8fafc 100%);
+}
+
+/* ─── TEMA OSCURO: MIDNIGHT OBSIDIAN LUXURY ─── */
+[data-theme="dark"] {
+  --bg-primary: #060911;
+  --bg-secondary: #0c1220;
+  --bg-card: rgba(13, 20, 36, 0.78);
+  --bg-card-hover: rgba(18, 28, 50, 0.92);
+  --bg-card-elevated: rgba(22, 35, 62, 0.94);
+  --bg-input: rgba(8, 14, 26, 0.85);
+  --bg-input-focus: rgba(11, 19, 36, 0.98);
+
+  --gold-primary: #d4af37;
+  --gold-light: #f7e089;
+  --gold-gradient: linear-gradient(135deg, #c5a059 0%, #f7df94 50%, #d4af37 100%);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+
+  --cyan-electric: #38bdf8;
+  --cyan-glow: rgba(56, 189, 248, 0.35);
+  --blue-sapphire: #2563eb;
+  --blue-gradient: linear-gradient(135deg, #1d4ed8 0%, #38bdf8 100%);
+
+  --verde: #10b981;
+  --verde-bg: rgba(16, 185, 129, 0.12);
+  --verde-border: rgba(16, 185, 129, 0.4);
+  --verde-glow: rgba(16, 185, 129, 0.3);
+
+  --naranja: #f59e0b;
+  --naranja-bg: rgba(245, 158, 11, 0.12);
+  --naranja-border: rgba(245, 158, 11, 0.4);
+  --naranja-glow: rgba(245, 158, 11, 0.3);
+
+  --rojo: #f43f5e;
+  --rojo-bg: rgba(244, 63, 94, 0.12);
+  --rojo-border: rgba(244, 63, 94, 0.4);
+  --rojo-glow: rgba(244, 63, 94, 0.3);
+
+  --morado: #a855f7;
+  --morado-claro: #d8b4fe;
+  --morado-bg: rgba(168, 85, 247, 0.15);
+
+  --azul: #38bdf8;
+  --azul2: #60a5fa;
+  --azul3: rgba(56, 189, 248, 0.14);
+
+  --text-main: #f8fafc;
+  --text-heading: #ffffff;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --gris: #94a3b8;
+  --gris2: rgba(255, 255, 255, 0.05);
+
+  --borde: rgba(255, 255, 255, 0.1);
+  --borde-light: rgba(255, 255, 255, 0.16);
+  --borde-focus: #38bdf8;
+  --blanco: #ffffff;
+
+  --sombra: 0 16px 36px -8px rgba(0, 0, 0, 0.55), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+  --sombra-card: 0 20px 45px -12px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+  --sombra-glow: 0 0 35px -5px rgba(56, 189, 248, 0.22);
+
+  --header-bg: rgba(10, 16, 28, 0.88);
+  --header-border: rgba(255, 255, 255, 0.08);
+  --nav-bg: rgba(12, 19, 34, 0.9);
+  --nav-active-bg: linear-gradient(135deg, rgba(37, 99, 235, 0.3) 0%, rgba(56, 189, 248, 0.22) 100%);
+  --nav-active-color: #ffffff;
+  --nav-btn-color: #94a3b8;
+  --nav-btn-hover: rgba(255, 255, 255, 0.06);
+
+  --metric-bg: rgba(8, 14, 28, 0.65);
+  --metric-border: rgba(255, 255, 255, 0.08);
+  --metric-value-color: #ffffff;
+
+  --th-bg: rgba(8, 14, 28, 0.85);
+  --tr-hover: rgba(56, 189, 248, 0.06);
+
+  --body-bg-gradient: 
+    radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(212, 175, 55, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(37, 99, 235, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #060911 0%, #0a0f1d 50%, #060911 100%);
+}
+
+/* ==========================================================
+   RESET, SCROLLBAR & BASE ENVIRONMENT
+   ========================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--borde);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--azul2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  background-image: var(--body-bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ==========================================================
+   DYNAMIC LUXURY HEADER (ULTRA-CORPORATE DARK LUXURY)
+   ========================================================== */
+
+header {
+  background: rgba(10, 16, 28, 0.94);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  color: #ffffff;
+  padding: 16px 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 30;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(56, 189, 248, 0.7) 30%, rgba(212, 175, 55, 0.7) 70%, transparent 100%);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-logo:hover {
+  transform: scale(1.04);
+}
+
+.header-text h1 {
+  margin: 0 0 3px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 60%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-text p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.01em;
+}
+
+/* THEME TOGGLE BUTTON (ON DARK LUXURY HEADER) */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(12px);
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+  color: #ffffff;
+}
+
+.theme-toggle-btn .theme-icon {
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle-btn:hover .theme-icon {
+  transform: rotate(20deg) scale(1.15);
+}
+
+/* CABECERA PARA PDF - OCULTA EN PANTALLA */
+.pdf-header {
+  display: none;
+}
+
+/* ==========================================================
+   DYNAMIC DOCK NAVIGATION
+   ========================================================== */
+
+nav.tabs-menu {
+  background: var(--nav-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  gap: 6px;
+  padding: 10px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 25;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+nav.tabs-menu::-webkit-scrollbar {
+  display: none;
+}
+
+nav.tabs-menu button {
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: var(--nav-btn-color);
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 13.5px;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+nav.tabs-menu button:hover {
+  background: var(--nav-btn-hover);
+  color: var(--text-heading);
+  transform: translateY(-1px);
+}
+
+nav.tabs-menu button.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-color) !important;
+  font-weight: 700;
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+nav.tabs-menu button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 20%;
+  right: 20%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #0284c7, #2563eb);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+}
+
+/* ==========================================================
+   MAIN CONTAINER & TAB TRANSITIONS
+   ========================================================== */
+
+main {
+  max-width: 1480px;
+  margin: auto;
+  padding: 28px 32px;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+  animation: luxuryTabEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes luxuryTabEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================
+   GLASSMORPHIC 3D CARDS
+   ========================================================== */
+
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  box-shadow: var(--sombra-card);
+  padding: 26px 30px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--borde-light);
+  box-shadow: 0 20px 45px -8px rgba(15, 23, 42, 0.12);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.3), rgba(217, 119, 6, 0.3), transparent);
+  pointer-events: none;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: var(--text-heading);
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--borde-light);
+}
+
+/* ==========================================================
+   GRID LAYOUTS
+   ========================================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* ==========================================================
+   FORM CONTROLS & SATIN INPUTS
+   ========================================================== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1.5px solid var(--borde);
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-main);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-dim);
+}
+
+select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23475569'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px;
+  appearance: none;
+}
+
+[data-theme="dark"] select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+select option {
+  background: var(--bg-card-elevated);
+  color: var(--text-main);
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background: var(--bg-input-focus);
+  border-color: var(--borde-focus);
+  box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.18);
+}
+
+/* ==========================================================
+   CAMPOS CONDICIONALES (SEGÚN MODO DIN)
+   ========================================================== */
+
+.condicional {
+  display: none;
+}
+
+.condicional.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  animation: condicionalEnter 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes condicionalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================
+   DYNAMIC LUXURY BUTTONS
+   ========================================================== */
+
+.btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13.5px;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  background: var(--blue-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.45);
+  filter: brightness(1.08);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn.secondary {
+  background: var(--gris2);
+  color: var(--text-main);
+  border: 1px solid var(--borde);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn.secondary:hover {
+  background: var(--borde-light);
+  color: var(--text-heading);
+}
+
+.btn.green {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn.green:hover {
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.5);
+}
+
+.btn.orange {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn.orange:hover {
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.5);
+}
+
+.btn.red {
+  background: linear-gradient(135deg, #e11d48 0%, #f43f5e 100%);
+  box-shadow: 0 4px 16px rgba(225, 29, 72, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn.red:hover {
+  box-shadow: 0 8px 24px rgba(225, 29, 72, 0.5);
+}
+
+.btn.light {
+  background: var(--gris2);
+  color: var(--text-main);
+  border: 1px solid var(--borde);
+  box-shadow: none;
+}
+
+.btn.light:hover {
+  background: var(--borde);
+  color: var(--text-heading);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* ==========================================================
+   STATUS & EVALUATION INDICATORS
+   ========================================================== */
+
+.status {
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+  border: 1.5px solid transparent;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.status .big {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.status .small {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.status.green {
+  color: var(--verde);
+  background: var(--verde-bg);
+  border-color: var(--verde-border);
+  box-shadow: 0 0 25px var(--verde-glow);
+}
+
+.status.orange {
+  color: var(--naranja);
+  background: var(--naranja-bg);
+  border-color: var(--naranja-border);
+  box-shadow: 0 0 25px var(--naranja-glow);
+}
+
+.status.red {
+  color: var(--rojo);
+  background: var(--rojo-bg);
+  border-color: var(--rojo-border);
+  box-shadow: 0 0 25px var(--rojo-glow);
+}
+
+.status.gray {
+  color: var(--text-muted);
+  background: var(--gris2);
+  border-color: var(--borde);
+}
+
+/* ==========================================================
+   RESULT METRICS (HIGH-TECH GAUGES)
+   ========================================================== */
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.metric {
+  background: var(--metric-bg);
+  border: 1px solid var(--metric-border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.metric:hover {
+  border-color: var(--azul);
+  transform: translateY(-2px);
+}
+
+.metric .label {
+  color: var(--text-muted);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 6px;
+  color: var(--metric-value-color);
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================
+   KPIS DASHBOARD (LUXURY GAUGES WITH BACKLIGHT)
+   ========================================================== */
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.kpi {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--sombra-card);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi:hover {
+  transform: translateY(-3px);
+  border-color: var(--azul2);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.kpi .num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.kpi .txt {
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Ambient backlight spheres per KPI */
+.kpi:has(#kpiTotal) {
+  background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.1) 0%, transparent 60%), var(--bg-card);
+}
+.kpi:has(#kpiGreen) {
+  background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 60%), var(--bg-card);
+}
+.kpi:has(#kpiOrange) {
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 60%), var(--bg-card);
+}
+.kpi:has(#kpiRed) {
+  background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.1) 0%, transparent 60%), var(--bg-card);
+}
+
+#kpiGreen { color: var(--verde); }
+#kpiOrange { color: var(--naranja); }
+#kpiRed { color: var(--rojo); }
+#kpiTotal { color: var(--azul2); }
+
+/* ==========================================================
+   TABLES (GLASS DATA GRID)
+   ========================================================== */
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13.5px;
+}
+
+th, td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--borde-light);
+  text-align: left;
+}
+
+th {
+  background: var(--th-bg);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+th:first-child { border-top-left-radius: 8px; }
+th:last-child { border-top-right-radius: 8px; }
+
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: var(--tr-hover);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================
+   BADGES (PILLS WITH GLOW)
+   ========================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.badge.green {
+  background: var(--verde-bg);
+  color: var(--verde);
+  border: 1px solid var(--verde-border);
+}
+
+.badge.orange {
+  background: var(--naranja-bg);
+  color: var(--naranja);
+  border: 1px solid var(--naranja-border);
+}
+
+.badge.red {
+  background: var(--rojo-bg);
+  color: var(--rojo);
+  border: 1px solid var(--rojo-border);
+}
+
+.badge.gray {
+  background: var(--gris2);
+  color: var(--text-muted);
+  border: 1px solid var(--borde);
+}
+
+/* ==========================================================
+   HELP & ALERT BOXES
+   ========================================================== */
+
+.help {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.alert {
+  border-left: 4px solid #d97706;
+  background: var(--naranja-bg);
+  border-top: 1px solid var(--naranja-border);
+  border-right: 1px solid var(--naranja-border);
+  border-bottom: 1px solid var(--naranja-border);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 13.5px;
+  color: var(--naranja);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.alert-info {
+  border-left: 4px solid #0284c7;
+  background: var(--azul3);
+  border-top: 1px solid rgba(2, 132, 199, 0.3);
+  border-right: 1px solid rgba(2, 132, 199, 0.3);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.3);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--azul);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.alert-nota-tecnica {
+  border-left: 4px solid #7c3aed;
+  background: var(--morado-bg);
+  border-top: 1px solid rgba(124, 58, 237, 0.3);
+  border-right: 1px solid rgba(124, 58, 237, 0.3);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  margin: 16px 0;
+  font-size: 13px;
+  color: var(--morado);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .alert-nota-tecnica {
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--morado-claro);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* ==========================================================
+   SMALL BUTTONS
+   ========================================================== */
+
+.small-btn {
+  border: 1px solid var(--borde);
+  background: var(--gris2);
+  color: var(--text-main);
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  margin: 2px;
+  transition: all 0.2s ease;
+}
+
+.small-btn:hover {
+  background: var(--azul3);
+  border-color: var(--azul2);
+  color: var(--azul2);
+}
+
+/* ==========================================================
+   CHART WRAPPER & SVG INTERACTIVO
+   ========================================================== */
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+#chartSvg {
+  width: 100%;
+  height: 560px;
+  display: block;
+  background: #ffffff;
+  cursor: crosshair;
+}
+
+/* Tooltip interactivo para la gráfica SVG */
+.chart-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(15, 23, 42, 0.96);
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  max-width: 280px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.chart-tooltip.visible {
+  opacity: 1;
+}
+
+.chart-tooltip .tt-title {
+  font-weight: 800;
+  font-size: 13px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4px;
+}
+
+.chart-tooltip .tt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.chart-tooltip .tt-label {
+  color: #94a3b8;
+}
+
+.chart-tooltip .tt-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+}
+
+.chart-tooltip .tt-status {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-align: center;
+}
+
+.chart-tooltip .tt-status.green { color: #10b981; }
+.chart-tooltip .tt-status.orange { color: #f59e0b; }
+.chart-tooltip .tt-status.red { color: #f43f5e; }
+
+/* ==========================================================
+   COMPONENT LEGEND
+   ========================================================== */
+
+.component-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 14px 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.component-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.component-symbol {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.symbol-vertical { color: #e53935; }
+.symbol-longitudinal { color: #16803c; }
+.symbol-transversal { color: #9b59b6; }
+
+/* ==========================================================
+   INFORME PREVIEW ON SCREEN
+   ========================================================== */
+
+#informeContenido h1 {
+  color: var(--text-heading) !important;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+#informeContenido h2 {
+  color: var(--azul2) !important;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#informeContenido hr {
+  border: 0;
+  height: 1px;
+  background: var(--borde);
+  margin: 16px 0;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 36px 20px;
+  border-top: 1px solid var(--borde-light);
+}
+
+.footer-logo {
+  height: 22px;
+  vertical-align: middle;
+  margin-left: 6px;
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+  opacity: 1;
+}
+
+/* ==========================================================
+   PRINT / PDF STYLESHEET (DIN 4150-3:2016-12)
+   ========================================================== */
+
+@media print {
+  nav,
+  .no-print,
+  #formCard,
+  .tabs-menu,
+  header,
+  .theme-toggle-btn {
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #1d2939 !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .card {
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 6px 0 !important;
+    margin-bottom: 8px !important;
+    border-radius: 0 !important;
+    color: #1d2939 !important;
+    overflow: visible !important;
+  }
+
+  .card::before,
+  .card::after {
+    display: none !important;
+  }
+
+  .card h2, .card h3 {
+    color: #17324d !important;
+    font-size: 13px !important;
+    margin-bottom: 6px !important;
+    padding-bottom: 3px !important;
+    border-bottom: 1px solid #d0d5dd !important;
+  }
+
+  #informeContenido h1 {
+    color: #17324d !important;
+    font-size: 16px !important;
+    margin-bottom: 4px !important;
+  }
+
+  #informeContenido h2 {
+    color: #245b86 !important;
+    font-size: 13px !important;
+  }
+
+  #informeContenido hr {
+    border: 0 !important;
+    height: 1px !important;
+    background: #d0d5dd !important;
+    margin: 6px 0 !important;
+  }
+
+  .tab {
+    display: none !important;
+  }
+
+  #tab-informe {
+    display: block !important;
+  }
+
+  #tab-grafica {
+    display: block !important;
+  }
+
+  .pdf-header {
+    display: block !important;
+    padding: 12px 0 8px;
+    border-bottom: 2px solid #17324d;
+    margin-bottom: 10px;
+  }
+
+  .pdf-header .logo-img {
+    height: 50px;
+    width: auto;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .pdf-header h1 {
+    font-size: 18px;
+    color: #17324d !important;
+    margin: 0 0 3px;
+  }
+
+  .pdf-header p {
+    font-size: 11px;
+    color: #667085 !important;
+    margin: 0 0 2px;
+  }
+
+  #chartSvg {
+    height: 320px !important;
+    width: 100% !important;
+    display: block !important;
+    background: white !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 4px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chart-wrapper {
+    min-height: 320px !important;
+    height: auto !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+    border: 1px solid #d0d5dd !important;
+    border-radius: 6px !important;
+    padding: 8px !important;
+    background: white !important;
+    margin: 10px 0 !important;
+  }
+
+  .chart-tooltip {
+    display: none !important;
+  }
+
+  .component-legend {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding: 6px 4px !important;
+    border-top: 1px solid #eaecf0 !important;
+    margin-top: 6px !important;
+    justify-content: center !important;
+    color: #1d2939 !important;
+  }
+
+  .component-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    font-size: 11px !important;
+  }
+
+  .component-symbol {
+    font-size: 15px !important;
+  }
+
+  .card:has(.grid3) {
+    display: block !important;
+    page-break-inside: avoid !important;
+    margin: 6px 0 !important;
+    padding: 0 !important;
+  }
+
+  .grid3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .metric {
+    background: #f8fafc !important;
+    border: 1px solid #e4e7ec !important;
+    border-radius: 4px !important;
+    padding: 6px 8px !important;
+    color: #1d2939 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .metric .label {
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    color: #667085 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .metric .value {
+    font-family: 'JetBrains Mono', monospace, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #17324d !important;
+    letter-spacing: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  .kpis {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 6px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .kpi {
+    background: #f8fafc !important;
+    border: 1px solid #e4e7ec !important;
+    border-radius: 4px !important;
+    padding: 6px 8px !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .kpi .num {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+  }
+
+  .kpi .txt {
+    font-size: 9px !important;
+    margin-top: 3px !important;
+  }
+
+  .card:has(.chart-wrapper) {
+    page-break-inside: avoid !important;
+  }
+
+  #tab-grafica {
+    page-break-after: always !important;
+  }
+
+  #tab-informe {
+    page-break-before: always !important;
+  }
+
+  div[style*="border:2px solid"] {
+    page-break-inside: avoid !important;
+    page-break-before: auto !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 11px !important;
+    margin-bottom: 8px !important;
+  }
+
+  td, th {
+    padding: 4px 6px !important;
+    border: 1px solid #e4e7ec !important;
+  }
+
+  th {
+    background: #f1f5f9 !important;
+    font-weight: 700 !important;
+  }
+
+  footer {
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 10px !important;
+    color: #667085 !important;
+    border-top: 1px solid #d0d5dd !important;
+    padding: 6px 10px 4px !important;
+    background: white !important;
+    z-index: 9999 !important;
+    page-break-inside: avoid !important;
+  }
+
+  #informeContenido,
+  #tab-informe .card {
+    padding-bottom: 55px !important;
+  }
+
+  .footer-logo {
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
+    display: inline-block;
+  }
+
+  #informeContenido h3 {
+    page-break-after: avoid !important;
+  }
+
+  #informeContenido p,
+  #informeContenido table {
+    page-break-inside: avoid !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  .alert-nota-tecnica {
+    background: #f5f3ff !important;
+    color: #5b21b6 !important;
+    border-left: 4px solid #7c3aed !important;
+    padding: 8px 12px !important;
+    margin: 8px 0 !important;
+    font-size: 10px !important;
+    page-break-inside: avoid !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1cm 2.2cm 1cm;
+    @bottom-right {
+      content: counter(page) " / " counter(pages);
+      font-size: 9px;
+      color: #667085;
+    }
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN
+   ========================================================== */
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .result-grid,
+  .kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 14px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .header-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-logo {
+    height: 42px;
+  }
+  .header-text h1 {
+    font-size: 18px;
+  }
+  nav.tabs-menu {
+    padding: 8px 16px;
+  }
+  main {
+    padding: 16px;
+  }
+  .card {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+  .grid,
+  .grid2,
+  .grid3,
+  .result-grid,
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+  #chartSvg {
+    height: 420px;
+  }
+  .chart-wrapper {
+    min-height: 420px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<!-- ========================================================
+     CABECERA WEB - VISIBLE EN PANTALLA
+     ======================================================== -->
+
+<header>
+  <div class="header-brand">
+    <img src="lemostransparente.png" alt="LEMOS" class="header-logo">
+    <div class="header-text">
+      <h1>Control de Vibraciones por Voladuras</h1>
+      <p>Herramienta de registro y evaluación — DIN 4150-3:2016-12</p>
+    </div>
+  </div>
+  <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-btn" title="Cambiar Tema (Claro / Oscuro)">
+    <span class="theme-icon" id="themeIcon">☀️</span>
+    <span class="theme-label" id="themeLabel">Modo Claro</span>
+  </button>
+</header>
+
+
+<!-- ========================================================
+     CABECERA PDF - LOGO + TÍTULO + PROYECTO
+     ======================================================== -->
+
+<div class="pdf-header">
+  <img src="LEMOS.png" alt="LEMOS" class="logo-img">
+  <h1>Control de Vibraciones por Voladuras — DIN 4150-3:2016-12</h1>
+  <p>Proyecto: <span id="pdf-proyecto">OBRA DESMONTE BARRIO DO CURA - VIGO</span></p>
+  <p>· Generado: <span id="pdf-generado"></span></p>
+</div>
+
+
+<!-- ========================================================
+     NAVEGACIÓN
+     ======================================================== -->
+
+<nav class="tabs-menu">
+
+  <button
+    class="active"
+    onclick="showTab('tab-dashboard',this)">
+    Dashboard
+  </button>
+
+  <button
+    onclick="showTab('tab-nueva',this)">
+    Nueva medición
+  </button>
+
+  <button
+    onclick="showTab('tab-historial',this)">
+    Historial
+  </button>
+
+  <button
+    onclick="showTab('tab-grafica',this)">
+    Gráfica DIN
+  </button>
+
+  <button
+    onclick="showTab('tab-estudio',this)">
+    Estudio
+  </button>
+
+  <button
+    onclick="showTab('tab-datos',this)">
+    Datos / Backup
+  </button>
+
+  <button
+    onclick="showTab('tab-informe',this)">
+    Informe
+  </button>
+
+</nav>
+
+
+<main>
+
+
+<!-- ========================================================
+     DASHBOARD
+     ======================================================== -->
+
+<section
+  id="tab-dashboard"
+  class="tab active">
+
+  <div class="card">
+
+    <h2>
+      Panel de control
+    </h2>
+
+    <p class="help">
+      Resumen de las mediciones almacenadas
+      en este dispositivo/navegador.
+      Evaluación conforme a DIN 4150-3:2016-12.
+    </p>
+
+  </div>
+
+
+  <div class="kpis">
+
+    <div class="kpi">
+
+      <div
+        class="num"
+        id="kpiTotal">
+        0
+      </div>
+
+      <div class="txt">
+        Mediciones
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div
+        class="num"
+        id="kpiGreen">
+        0
+      </div>
+
+      <div class="txt">
+        Dentro del límite
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div
+        class="num"
+        id="kpiOrange">
+        0
+      </div>
+
+      <div class="txt">
+        Atención
+      </div>
+
+    </div>
+
+
+    <div class="kpi">
+
+      <div
+        class="num"
+        id="kpiRed">
+        0
+      </div>
+
+      <div class="txt">
+        Por encima
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <h3>
+      Últimas mediciones
+    </h3>
+
+    <div id="dashboardTable"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================================
+     NUEVA MEDICIÓN
+     ======================================================== -->
+
+<section
+  id="tab-nueva"
+  class="tab">
+
+
+  <div
+    class="card"
+    id="formCard">
+
+
+    <h2 id="formTitle">
+      Nueva medición
+    </h2>
+
+
+    <div class="alert">
+
+      Introduce los datos obtenidos del sismógrafo.
+      La aplicación es independiente del fabricante
+      y permite introducir manualmente resultados
+      de distintos equipos. La evaluación normativa
+      se realiza conforme a DIN 4150-3:2016-12.
+
+    </div>
+
+
+    <input
+      type="hidden"
+      id="editId">
+
+
+    <!-- DATOS GENERALES -->
+
+    <h3>
+      1. Datos generales
+    </h3>
+
+
+    <div class="grid">
+
+
+      <div class="field">
+
+        <label>
+          Identificación de voladura
+        </label>
+
+        <input
+          id="voladura"
+          placeholder="VOL-2026-001">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Fecha
+        </label>
+
+        <input
+          type="date"
+          id="fecha">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Hora
+        </label>
+
+        <input
+          type="time"
+          id="hora">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Explotación / obra
+        </label>
+
+        <input
+          id="explotacion">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Punto de control
+        </label>
+
+        <input
+          id="punto"
+          placeholder="P-01">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Distancia a voladura (m)
+        </label>
+
+        <input
+          type="number"
+          step="0.01"
+          id="distancia">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Tipo de estructura (DIN 4150-3)
+        </label>
+
+        <select id="linea">
+
+          <option value="I">
+            Línea I — Edificios comerciales, industriales y de diseño similar
+          </option>
+
+          <option
+            value="II"
+            selected>
+            Línea II — Viviendas o edificios de diseño y/u ocupación similar
+          </option>
+
+          <option value="III">
+            Línea III — Estructuras especialmente sensibles y de gran valor intrínseco (ej. catalogadas)
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Modo de evaluación DIN 4150-3
+        </label>
+
+        <select id="modoDIN" onchange="actualizarCamposCondicionales()">
+
+          <optgroup label="Corta duración — Edificios (Tabla 1)">
+            <option value="fundacion_corta" selected>
+              Corta duración — cimentación (Tabla 1)
+            </option>
+            <option value="piso_superior_corta">
+              Corta duración — piso superior horizontal (Tabla 1)
+            </option>
+            <option value="losa_corta">
+              Corta duración — losa de piso vertical (Tabla 1)
+            </option>
+            <option value="fundacion_corta_anexoB">
+              Corta duración — cimentación, método Anexo B (valor filtrado)
+            </option>
+            <option value="arranque_parada">
+              Arranque/parada de maquinaria (Tabla 1, col. 5-6)
+            </option>
+          </optgroup>
+
+          <optgroup label="Larga duración — Edificios (Tabla 4)">
+            <option value="piso_superior_larga">
+              Larga duración — piso superior horizontal (Tabla 4)
+            </option>
+            <option value="losa_larga">
+              Larga duración — losa de piso vertical (Tabla 4)
+            </option>
+          </optgroup>
+
+          <optgroup label="Estructuras especiales">
+            <option value="elementos_masivos">
+              Elementos estructurales masivos (80 mm/s)
+            </option>
+            <option value="cavidad_subterranea">
+              Cavidades subterráneas — túneles, galerías (Tabla 2)
+            </option>
+            <option value="tuberia_corta">
+              Tuberías enterradas — corta duración (Tabla 3)
+            </option>
+            <option value="tuberia_larga">
+              Tuberías enterradas — larga duración (Tabla 3, -50%)
+            </option>
+          </optgroup>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Descripción estructura
+        </label>
+
+        <input id="estructura">
+
+      </div>
+
+
+    </div>
+
+
+    <!-- CAMPOS CONDICIONALES SEGÚN MODO -->
+
+    <div class="grid" style="margin-top:18px">
+
+
+      <div class="field condicional" id="campoMaterialCavidad">
+
+        <label>
+          Material del revestimiento (Tabla 2)
+        </label>
+
+        <select id="materialCavidad">
+
+          <option value="hormigon_armado" selected>
+            Hormigón armado / proyectado / dovelas — 80 mm/s
+          </option>
+
+          <option value="hormigon_piedra">
+            Hormigón / piedra — 60 mm/s
+          </option>
+
+          <option value="mamposteria">
+            Mampostería (fábrica) — 40 mm/s
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field condicional" id="campoMaterialTuberia">
+
+        <label>
+          Material de la tubería (Tabla 3)
+        </label>
+
+        <select id="materialTuberia">
+
+          <option value="acero_soldado" selected>
+            Acero soldado — 100 mm/s (corta) / 50 mm/s (larga)
+          </option>
+
+          <option value="arcilla_vitrificada">
+            Arcilla vitrificada, hormigón, hormigón armado, pretensado, metal — 80 mm/s (corta) / 40 mm/s (larga)
+          </option>
+
+          <option value="mamposteria_plastico">
+            Mampostería, plásticos — 50 mm/s (corta) / 25 mm/s (larga)
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field condicional" id="campoValorFiltrado">
+
+        <label>
+          Valor filtrado v<sub>iBn,max</sub> (mm/s) — DIN 45669-1 Anexo E
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="valorFiltrado"
+          placeholder="Ej. 4.8">
+
+        <small class="help" style="font-size:11px;margin-top:4px">
+          Valor de velocidad filtrada proporcionado por el sismógrafo
+          (Instantel y similares lo calculan automáticamente).
+          Se compara contra Tabla B.1: Línea I = 20 mm/s, Línea II = 5 mm/s, Línea III = 3 mm/s.
+        </small>
+
+      </div>
+
+
+    </div>
+
+
+    <!-- VOLADURA -->
+
+    <h3 style="margin-top:25px">
+
+      2. Voladura
+
+    </h3>
+
+
+    <div class="grid">
+
+
+      <div class="field">
+
+        <label>
+          Carga total (kg)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="cargaTotal">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Carga máxima instantánea / secuencia (kg)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="cargaMIC">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Nº de barrenos
+        </label>
+
+        <input
+          type="number"
+          id="barrenos">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Secuencias
+        </label>
+
+        <input id="secuencias">
+
+      </div>
+
+
+    </div>
+
+
+    <!-- SISMÓGRAFO -->
+
+    <h3 style="margin-top:25px">
+
+      3. Sismógrafo
+
+    </h3>
+
+
+    <div class="grid">
+
+
+      <div class="field">
+
+        <label>
+          Fabricante
+        </label>
+
+        <input
+          id="fabricante"
+          placeholder="Ej. Instantel">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Modelo
+        </label>
+
+        <input id="modelo">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Nº de serie
+        </label>
+
+        <input id="serie">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Observaciones equipo
+        </label>
+
+        <input id="obsEquipo">
+
+      </div>
+
+
+    </div>
+
+
+    <!-- LECTURAS -->
+
+    <h3 style="margin-top:25px">
+
+      4. Lecturas
+
+    </h3>
+
+
+    <div class="grid3">
+
+
+      <div class="field">
+
+        <label>
+          PPV vertical (mm/s)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="v">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          PPV longitudinal (mm/s)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="l">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          PPV transversal (mm/s)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="t">
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      class="grid3"
+      style="margin-top:14px">
+
+
+      <div class="field">
+
+        <label>
+          Frecuencia principal (Hz)
+        </label>
+
+        <input
+          type="number"
+          step="0.001"
+          id="frecuencia">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Método de frecuencia
+        </label>
+
+        <select id="metodoFrecuencia">
+
+          <option>
+            Dato proporcionado por sismógrafo
+          </option>
+
+          <option>
+            FFT
+          </option>
+
+          <option>
+            Espectro de respuesta
+          </option>
+
+          <option>
+            Semiperíodo
+          </option>
+
+          <option>
+            Estimación manual
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Desplazamiento registrado (mm), si disponible
+        </label>
+
+        <input
+          type="number"
+          step="0.0001"
+          id="desplazamiento">
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      class="field"
+      style="margin-top:14px">
+
+      <label>
+        Descripción del terreno / observaciones
+      </label>
+
+      <textarea
+        id="observaciones"></textarea>
+
+    </div>
+
+
+    <div class="actions">
+
+      <button
+        class="btn green"
+        onclick="calcular(false)">
+
+        Calcular resultado
+
+      </button>
+
+
+      <button
+        class="btn"
+        onclick="guardarMedicion()">
+
+        Guardar medición
+
+      </button>
+
+
+      <button
+        class="btn light"
+        onclick="limpiarFormulario()">
+
+        Limpiar
+
+      </button>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- RESULTADO -->
+
+  <div class="card">
+
+    <h2>
+      Resultado de la evaluación
+    </h2>
+
+
+    <div
+      id="resultadoStatus"
+      class="status gray">
+
+      <div class="big">
+        Sin calcular
+      </div>
+
+      <div class="small">
+
+        Introduce los valores de PPV y frecuencia.
+
+      </div>
+
+    </div>
+
+
+    <div class="result-grid">
+
+
+      <div class="metric">
+
+        <div class="label">
+          PPV máxima
+        </div>
+
+        <div
+          class="value"
+          id="rPPV">
+          —
+        </div>
+
+      </div>
+
+
+      <div class="metric">
+
+        <div class="label">
+          Componente dominante
+        </div>
+
+        <div
+          class="value"
+          id="rComp">
+          —
+        </div>
+
+      </div>
+
+
+      <div class="metric">
+
+        <div class="label">
+          Frecuencia
+        </div>
+
+        <div
+          class="value"
+          id="rFreq">
+          —
+        </div>
+
+      </div>
+
+
+      <div class="metric">
+
+        <div class="label">
+          Límite calculado
+        </div>
+
+        <div
+          class="value"
+          id="rLimite">
+          —
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      id="rDetalle"
+      class="help"
+      style="margin-top:15px">
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ========================================================
+     HISTORIAL
+     ======================================================== -->
+
+<section
+  id="tab-historial"
+  class="tab">
+
+
+  <div class="card">
+
+
+    <h2>
+      Historial de mediciones
+    </h2>
+
+
+    <div
+      class="grid3 no-print">
+
+
+      <div class="field">
+
+        <label>
+          Buscar
+        </label>
+
+        <input
+          id="buscar"
+          oninput="renderHistorial()"
+          placeholder="voladura, punto, sismógrafo...">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Estado
+        </label>
+
+        <select
+          id="filtroEstado"
+          onchange="renderHistorial()">
+
+          <option value="">
+            Todos
+          </option>
+
+          <option value="green">
+            Dentro
+          </option>
+
+          <option value="orange">
+            Atención
+          </option>
+
+          <option value="red">
+            Por encima
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Línea (DIN 4150-3)
+        </label>
+
+        <select
+          id="filtroGrupo"
+          onchange="renderHistorial()">
+
+          <option value="">
+            Todas
+          </option>
+
+          <option value="I">
+            Línea I — Comercial / Industrial
+          </option>
+
+          <option value="II">
+            Línea II — Viviendas
+          </option>
+
+          <option value="III">
+            Línea III — Sensible / Catalogada
+          </option>
+
+        </select>
+
+      </div>
+
+
+    </div>
+
+
+    <div
+      id="historialTable"
+      style="overflow-x:auto;margin-top:20px">
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ========================================================
+     GRÁFICA
+     ======================================================== -->
+
+<section
+  id="tab-grafica"
+  class="tab">
+
+
+  <div class="card">
+
+
+    <h2>
+      Gráfica de control — frecuencia / velocidad
+    </h2>
+
+
+    <p class="help">
+
+      La gráfica representa simultáneamente las tres
+      componentes registradas por el sismógrafo.
+      La posición horizontal corresponde a la frecuencia
+      principal y la posición vertical al PPV de cada
+      componente.
+
+      <br><br>
+
+      <b>Interactividad:</b> Pasa el ratón sobre los puntos
+      o sobre las curvas de valores guía para ver información
+      detallada (PPV, frecuencia, límite aplicable, estado
+      y porcentaje respecto al valor guía).
+
+      La componente que presenta el mayor PPV queda
+      identificada adicionalmente mediante un aro exterior
+      cuyo color indica el estado frente al límite.
+
+    </p>
+
+
+    <div class="chart-wrapper">
+
+      <svg id="chartSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div id="chartTooltip" class="chart-tooltip"></div>
+
+    </div>
+
+
+    <!-- LEYENDA DE COMPONENTES -->
+
+    <div class="component-legend">
+
+
+      <div class="component-item">
+
+        <span
+          class="component-symbol symbol-vertical">
+          ★
+        </span>
+
+        <span>
+          Componente Vertical
+        </span>
+
+      </div>
+
+
+      <div class="component-item">
+
+        <span
+          class="component-symbol symbol-longitudinal">
+          ■
+        </span>
+
+        <span>
+          Componente Longitudinal
+        </span>
+
+      </div>
+
+
+      <div class="component-item">
+
+        <span
+          class="component-symbol symbol-transversal">
+          ✕
+        </span>
+
+        <span>
+          Componente Transversal
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="card">
+
+
+    <h3>
+      Medición representada
+    </h3>
+
+
+    <div class="grid3">
+
+
+      <div class="metric">
+
+        <div class="label">
+          Frecuencia
+        </div>
+
+        <div
+          class="value"
+          id="chartFreq">
+          —
+        </div>
+
+      </div>
+
+
+      <div class="metric">
+
+        <div class="label">
+          PPV máxima
+        </div>
+
+        <div
+          class="value"
+          id="chartPPV">
+          —
+        </div>
+
+      </div>
+
+
+      <div class="metric">
+
+        <div class="label">
+          Línea DIN 4150-3
+        </div>
+
+        <div
+          class="value"
+          id="chartGroup">
+          —
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ========================================================
+     ESTUDIO
+     ======================================================== -->
+
+<section
+  id="tab-estudio"
+  class="tab">
+
+
+  <div class="card">
+
+
+    <h2>
+      Estudio de propagación
+    </h2>
+
+
+    <p class="help">
+
+      Herramienta experimental para estudiar la relación
+      entre PPV, carga máxima instantánea y distancia
+      a partir de las mediciones almacenadas.
+
+      Este ajuste de propagación no constituye una ecuación
+      de cálculo propia de DIN 4150-3.
+
+    </p>
+
+
+    <div class="actions no-print">
+
+      <button
+        class="btn"
+        onclick="calcularEstudio()">
+
+        Calcular estudio
+
+      </button>
+
+    </div>
+
+
+    <div id="estudioResultado"></div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ========================================================
+     DATOS
+     ======================================================== -->
+
+<section
+  id="tab-datos"
+  class="tab">
+
+
+  <div class="card">
+
+
+    <h2>
+      Datos y copias de seguridad
+    </h2>
+
+
+    <p class="help">
+
+      Los datos se almacenan localmente en este dispositivo.
+      Realiza periódicamente una copia para respaldo.
+
+    </p>
+
+
+    <div class="actions no-print">
+
+
+      <button
+        class="btn green"
+        onclick="exportJSON()">
+
+        Descargar copia JSON
+
+      </button>
+
+
+      <button
+        class="btn"
+        onclick="document.getElementById('importJSON').click()">
+
+        Restaurar JSON
+      </button>
+
+
+      <input
+        type="file"
+        id="importJSON"
+        accept=".json"
+        style="display:none"
+        onchange="importJSONFile(event)">
+
+
+      <button
+        class="btn red"
+        onclick="borrarTodo()">
+
+        Borrar todos los datos
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- ========================================================
+     INFORME
+     ======================================================== -->
+
+<section
+  id="tab-informe"
+  class="tab">
+
+
+  <div class="card">
+
+
+    <div class="no-print actions">
+
+      <button
+        class="btn"
+        onclick="imprimirConGrafica()">
+
+        Imprimir / Guardar PDF
+
+      </button>
+
+    </div>
+
+
+    <div id="informeContenido">
+
+
+      <h1 style="color:#17324d">
+
+        INFORME DE CONTROL DE VIBRACIONES
+        POR VOLADURA
+
+      </h1>
+
+
+      <h2 style="color:#245b86">
+
+        DIN 4150-3:2016-12
+
+      </h2>
+
+
+      <hr>
+
+
+      <div id="informeDatos">
+
+        Seleccione una medición desde el historial.
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <span>© 2026 LEMOS GRANITE, S.L. All rights reserved | A Technology Solution by </span>
+  <img src="LEMOS.png" alt="LEMOS" class="footer-logo">
+
+</footer>
+<script>
+
+/* ==========================================================
+   BASE DE DATOS - IndexedDB (PERSISTENTE EN iOS)
+   ========================================================== */
+
+const DB_NAME = 'SICONVOL_DB';
+const DB_VERSION = 1;
+const STORE_NAME = 'mediciones';
+
+let db = null;
+let mediciones = [];
+let medicionSeleccionada = null;
+
+// ── Inicializar IndexedDB ──
+function initDB() {
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+        request.onupgradeneeded = function(e) {
+            const db = e.target.result;
+            if (!db.objectStoreNames.contains(STORE_NAME)) {
+                const store = db.createObjectStore(STORE_NAME, { keyPath: 'id' });
+                store.createIndex('fecha', 'fecha', { unique: false });
+                store.createIndex('voladura', 'voladura', { unique: false });
+            }
+        };
+
+        request.onsuccess = function(e) {
+            db = e.target.result;
+            loadData().then(resolve).catch(reject);
+        };
+
+        request.onerror = function(e) {
+            console.error('Error al abrir IndexedDB:', e);
+            mediciones = cargarDBLocalStorage();
+            resolve();
+        };
+    });
+}
+
+// ── Cargar datos desde IndexedDB ──
+function loadData() {
+    return new Promise((resolve, reject) => {
+        if (!db) {
+            mediciones = cargarDBLocalStorage();
+            resolve();
+            return;
+        }
+
+        const transaction = db.transaction(STORE_NAME, 'readonly');
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.getAll();
+
+        request.onsuccess = function(e) {
+            mediciones = (e.target.result || []).map(m => ({
+                ...m,
+                linea: normalizarLinea(m.linea || m.grupo || "II"),
+                grupo: normalizarLinea(m.linea || m.grupo || "II")
+            }));
+            resolve();
+        };
+
+        request.onerror = function(e) {
+            console.error('Error al cargar datos:', e);
+            mediciones = cargarDBLocalStorage();
+            resolve();
+        };
+    });
+}
+
+// ── Guardar datos en IndexedDB ──
+function saveData() {
+    return new Promise((resolve, reject) => {
+        if (!db) {
+            guardarDBLocalStorage();
+            resolve();
+            return;
+        }
+
+        const transaction = db.transaction(STORE_NAME, 'readwrite');
+        const store = transaction.objectStore(STORE_NAME);
+
+        const clearRequest = store.clear();
+
+        clearRequest.onsuccess = function() {
+            mediciones.forEach(m => {
+                store.put(m);
+            });
+        };
+
+        transaction.oncomplete = function() {
+            resolve();
+        };
+
+        transaction.onerror = function(e) {
+            console.error('Error al guardar datos:', e);
+            guardarDBLocalStorage();
+            resolve();
+        };
+    });
+}
+
+// ── Respaldo en localStorage ──
+const DB_KEY = "SICONVOL_DIN4150_V4";
+const DB_KEY_OLD_1 = "SICONVOL_DIN4150_V3";
+const DB_KEY_OLD_2 = "DIN4150_VIBRACIONES_V1";
+const DB_KEY_OLD_3 = "UNE22381_VIBRACIONES_V2";
+
+function normalizarLinea(valor) {
+    const v = String(valor || "II").trim().toUpperCase();
+    const mapa = {
+        "1": "I", "2": "II", "3": "III",
+        "I": "I", "II": "II", "III": "III"
+    };
+    return mapa[v] || "II";
+}
+
+function cargarDBLocalStorage() {
+    try {
+        let raw = localStorage.getItem(DB_KEY);
+        if (!raw) {
+            raw = localStorage.getItem(DB_KEY_OLD_1)
+               || localStorage.getItem(DB_KEY_OLD_2)
+               || localStorage.getItem(DB_KEY_OLD_3);
+            if (raw) {
+                const data = JSON.parse(raw);
+                if (Array.isArray(data)) {
+                    data.forEach(m => {
+                        m.linea = normalizarLinea(m.linea || m.grupo);
+                        m.grupo = m.linea;
+                        if (!m.modoDIN) m.modoDIN = "fundacion_corta";
+                    });
+                    localStorage.setItem(DB_KEY, JSON.stringify(data));
+                    return data;
+                }
+            }
+            return [];
+        }
+        const data = JSON.parse(raw);
+        if (!Array.isArray(data)) return [];
+        data.forEach(m => {
+            m.linea = normalizarLinea(m.linea || m.grupo);
+            m.grupo = m.linea;
+        });
+        return data;
+    } catch(e) {
+        console.error(e);
+        return [];
+    }
+}
+
+function guardarDBLocalStorage() {
+    try {
+        localStorage.setItem(DB_KEY, JSON.stringify(mediciones));
+    } catch(e) {
+        console.error('Error al guardar en localStorage:', e);
+    }
+}
+
+
+/* ==========================================================
+   CRITERIOS DIN 4150-3:2016-12
+   Nomenclatura romana I / II / III
+   ========================================================== */
+
+const LINEA_DESCRIPCION = {
+  "I":   "Línea I — Edificios comerciales, industriales y de diseño similar",
+  "II":  "Línea II — Viviendas o edificios de diseño y/u ocupación similar",
+  "III": "Línea III — Estructuras especialmente sensibles y de gran valor intrínseco (por ejemplo, edificios catalogados)"
+};
+
+const LINEA_DESCRIPCION_CORTA = {
+  "I":   "Línea I — Comercial / Industrial",
+  "II":  "Línea II — Viviendas / Residencial",
+  "III": "Línea III — Sensible / Catalogada"
+};
+
+
+/* ==========================================================
+   TABLA 1 y TABLA 4 — Edificios
+   ========================================================== */
+
+const CRITERIOS_DIN4150 = {
+
+  // Línea I: Edificios comerciales, industriales y similares
+  "I": {
+    nombre: "Línea I — Comercial / Industrial",
+    tipoDesc: "Edificios destinados a fines comerciales, industriales y de diseño similar",
+
+    // Tabla 1 — Corta duración — Cimentación
+    f1_10: 20,
+    f10: 20,
+    f50: 40,
+    f100: 50,
+
+    // Tabla 1 — Corta duración — Piso superior / losa
+    pisoAlto: 40,
+    losaCorta: 20,
+
+    // Tabla 4 — Larga duración
+    pisoLargo: 10,
+    losaLarga: 10
+  },
+
+  // Línea II: Viviendas
+  "II": {
+    nombre: "Línea II — Residencial / Viviendas",
+    tipoDesc: "Viviendas o edificios de diseño y/u ocupación similar",
+
+    f1_10: 5,
+    f10: 5,
+    f50: 15,
+    f100: 20,
+
+    pisoAlto: 15,
+    losaCorta: 20,
+
+    pisoLargo: 5,
+    losaLarga: 10
+  },
+
+  // Línea III: Estructuras sensibles
+  "III": {
+    nombre: "Línea III — Sensible / Catalogada",
+    tipoDesc: "Estructuras de particular sensibilidad o de gran valor intrínseco (por ejemplo, edificios catalogados)",
+
+    f1_10: 3,
+    f10: 3,
+    f50: 8,
+    f100: 10,
+
+    pisoAlto: 8,
+    losaCorta: 20,
+
+    pisoLargo: 2.5,
+    losaLarga: 10
+  }
+
+};
+
+
+/* ==========================================================
+   TABLA 2 — Cavidades subterráneas (cláusula 5.2)
+   Valores fijos según material del revestimiento
+   ========================================================== */
+
+const MATERIALES_CAVIDAD = {
+  "hormigon_armado": {
+    etiqueta: "Hormigón armado / proyectado / dovelas",
+    limite: 80,
+    descripcion: "Reinforced or sprayed concrete, tubing segments"
+  },
+  "hormigon_piedra": {
+    etiqueta: "Hormigón / piedra",
+    limite: 60,
+    descripcion: "Concrete, stone"
+  },
+  "mamposteria": {
+    etiqueta: "Mampostería (fábrica)",
+    limite: 40,
+    descripcion: "Masonry"
+  }
+};
+
+
+/* ==========================================================
+   TABLA 3 — Tuberías enterradas (cláusula 5.3 y 6.2)
+   Valores según material y duración
+   ========================================================== */
+
+const MATERIALES_TUBERIA = {
+  "acero_soldado": {
+    etiqueta: "Acero soldado",
+    limiteCorta: 100,
+    limiteLarga: 50,
+    descripcion: "Steel, welded"
+  },
+  "arcilla_vitrificada": {
+    etiqueta: "Arcilla vitrificada, hormigón, hormigón armado, pretensado, metal",
+    limiteCorta: 80,
+    limiteLarga: 40,
+    descripcion: "Vitrified clay, concrete, reinforced concrete, prestressed concrete, metal"
+  },
+  "mamposteria_plastico": {
+    etiqueta: "Mampostería, plásticos",
+    limiteCorta: 50,
+    limiteLarga: 25,
+    descripcion: "Masonry, plastics"
+  }
+};
+
+
+/* ==========================================================
+   CLÁUSULA 5.2 — Elementos estructurales masivos
+   Valor fijo 80 mm/s (estribos, bloques de cimentación)
+   ========================================================== */
+
+const ELEMENTOS_MASIVOS_LIMITE = 80;
+
+
+/* ==========================================================
+   ANEXO B — Valores guía independientes de frecuencia
+   Tabla B.1 (método alternativo por filtrado)
+   ========================================================== */
+
+const ANEXO_B_VALORES = {
+  "I":   20,
+  "II":  5,
+  "III": 3
+};
+
+
+/* ==========================================================
+   MODOS DE EVALUACIÓN DIN 4150-3:2016-12
+   ========================================================== */
+
+const DIN_MODOS = {
+
+  fundacion_corta: {
+    etiqueta: "Corta duración — cimentación (Tabla 1)",
+    requiereFrecuencia: true,
+    tipoMedicion: "Cimentación · tres componentes",
+    tabla: "Tabla 1",
+    categoria: "edificio"
+  },
+
+  piso_superior_corta: {
+    etiqueta: "Corta duración — piso superior horizontal (Tabla 1)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Piso superior · dos componentes horizontales",
+    tabla: "Tabla 1",
+    categoria: "edificio"
+  },
+
+  losa_corta: {
+    etiqueta: "Corta duración — losa de piso vertical (Tabla 1)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Losa de piso · componente vertical",
+    tabla: "Tabla 1",
+    categoria: "edificio"
+  },
+
+  fundacion_corta_anexoB: {
+    etiqueta: "Corta duración — cimentación, método Anexo B (valor filtrado)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Cimentación · valor filtrado DIN 45669-1",
+    tabla: "Tabla B.1",
+    categoria: "edificio",
+    requiereValorFiltrado: true
+  },
+
+  arranque_parada: {
+    etiqueta: "Arranque/parada de maquinaria (Tabla 1, col. 5-6)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Piso superior o losa · valores de corta duración",
+    tabla: "Tabla 1 (col. 5-6)",
+    categoria: "edificio"
+  },
+
+  piso_superior_larga: {
+    etiqueta: "Larga duración — piso superior horizontal (Tabla 4)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Piso superior · dos componentes horizontales",
+    tabla: "Tabla 4",
+    categoria: "edificio"
+  },
+
+  losa_larga: {
+    etiqueta: "Larga duración — losa de piso vertical (Tabla 4)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Losa de piso · componente vertical",
+    tabla: "Tabla 4",
+    categoria: "edificio"
+  },
+
+  elementos_masivos: {
+    etiqueta: "Elementos estructurales masivos (80 mm/s)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Estribos, bloques de cimentación",
+    tabla: "Cláusula 5.2",
+    categoria: "especial"
+  },
+
+  cavidad_subterranea: {
+    etiqueta: "Cavidades subterráneas — túneles, galerías (Tabla 2)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Revestimiento de cavidad · perpendicular a la superficie",
+    tabla: "Tabla 2",
+    categoria: "especial",
+    requiereMaterialCavidad: true
+  },
+
+  tuberia_corta: {
+    etiqueta: "Tuberías enterradas — corta duración (Tabla 3)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Tubería enterrada · perpendicular al eje",
+    tabla: "Tabla 3",
+    categoria: "especial",
+    requiereMaterialTuberia: true
+  },
+
+  tuberia_larga: {
+    etiqueta: "Tuberías enterradas — larga duración (Tabla 3, -50%)",
+    requiereFrecuencia: false,
+    tipoMedicion: "Tubería enterrada · perpendicular al eje",
+    tabla: "Tabla 3 (-50%)",
+    categoria: "especial",
+    requiereMaterialTuberia: true
+  }
+
+};
+
+// Alias para máxima compatibilidad
+const CRITERIOS = CRITERIOS_DIN4150;
+
+
+/* ==========================================================
+   UTILIDADES
+   ========================================================== */
+
+function uid(){
+  return Date.now().toString(36) + Math.random().toString(36).substring(2,9);
+}
+
+function n(v){
+  const x = parseFloat(v);
+  return Number.isFinite(x) ? x : null;
+}
+
+function esc(s){
+  return String(s ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;");
+}
+
+function fmt(x,d=3){
+  if(x===null || x===undefined || !Number.isFinite(Number(x))){
+    return "—";
+  }
+  return Number(x).toLocaleString("es-ES",{
+    minimumFractionDigits:0,
+    maximumFractionDigits:d
+  });
+}
+
+
+/* ==========================================================
+   NAVEGACIÓN
+   ========================================================== */
+
+function showTab(id,btn){
+
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+
+  document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));
+
+  if(btn) btn.classList.add("active");
+
+  if(id==="tab-historial") renderHistorial();
+  if(id==="tab-dashboard") actualizarDashboard();
+  if(id==="tab-grafica") dibujarGrafica();
+  if(id==="tab-estudio") calcularEstudio();
+}
+
+
+/* ==========================================================
+   EVALUACIÓN SEGÚN DIN 4150-3:2016-12
+   ========================================================== */
+
+function interpolarDINFundacion(c, freq){
+
+  if(freq===null || !Number.isFinite(freq))
+    return null;
+
+  if(freq < 1)
+    return null;
+
+  // 1-10 Hz → valor constante
+  if(freq <= 10)
+    return c.f1_10;
+
+  // 10-50 Hz → interpolación lineal
+  if(freq <= 50){
+    return c.f10 + ((c.f50 - c.f10) / (50 - 10)) * (freq - 10);
+  }
+
+  // 50-100 Hz → interpolación lineal
+  if(freq <= 100){
+    return c.f50 + ((c.f100 - c.f50) / (100 - 50)) * (freq - 50);
+  }
+
+  // >100 Hz → valor de 100 Hz como mínimo
+  return c.f100;
+}
+
+
+function obtenerComponenteDIN(v, l, t, modo){
+
+  const componentes = {
+    Vertical: v,
+    Longitudinal: l,
+    Transversal: t
+  };
+
+  let permitidas;
+
+  switch(modo){
+
+    case "piso_superior_corta":
+    case "piso_superior_larga":
+    case "arranque_parada":
+      permitidas = ["Longitudinal", "Transversal"];
+      break;
+
+    case "losa_corta":
+    case "losa_larga":
+      permitidas = ["Vertical"];
+      break;
+
+    case "elementos_masivos":
+    case "cavidad_subterranea":
+    case "tuberia_corta":
+    case "tuberia_larga":
+    case "fundacion_corta_anexoB":
+      permitidas = ["Vertical", "Longitudinal", "Transversal"];
+      break;
+
+    case "fundacion_corta":
+    default:
+      permitidas = ["Vertical", "Longitudinal", "Transversal"];
+      break;
+  }
+
+  const validas = permitidas
+    .map(nombre => ({ nombre, valor: componentes[nombre] }))
+    .filter(x => x.valor !== null && Number.isFinite(x.valor));
+
+  if(!validas.length)
+    return null;
+
+  validas.sort((a, b) => b.valor - a.valor);
+
+  return validas[0];
+}
+
+
+function normalizarModoDIN(modo, ubicacion){
+  if (DIN_MODOS[modo]) return modo;
+  if (ubicacion === "piso_alto") return "piso_superior_corta";
+  return "fundacion_corta";
+}
+
+
+function evaluar(linea, freq, ppv, modo = "fundacion_corta", ubicacion, extras){
+
+  // Normalizar línea (I / II / III)
+  const lKey = normalizarLinea(linea);
+  const modoKey = normalizarModoDIN(modo, ubicacion);
+  const config = DIN_MODOS[modoKey];
+
+  // Extras opcionales (material de cavidad/tubería, valor filtrado)
+  const ext = extras || {};
+
+  if (!config) {
+    return {
+      estado: "gray",
+      texto: "Modo DIN no válido",
+      limite: null,
+      modo: modoKey,
+      modoEtiqueta: "—",
+      linea: lKey,
+      grupo: lKey
+    };
+  }
+
+  if (!CRITERIOS_DIN4150[lKey] && config.categoria === "edificio") {
+    return {
+      estado: "gray",
+      texto: "Línea DIN no válida",
+      limite: null,
+      modo: modoKey,
+      modoEtiqueta: config.etiqueta,
+      linea: lKey,
+      grupo: lKey
+    };
+  }
+
+  if (ppv === null || ppv === undefined || !Number.isFinite(Number(ppv))) {
+    return {
+      estado: "gray",
+      texto: "Falta la velocidad de vibración",
+      limite: null,
+      modo: modoKey,
+      modoEtiqueta: config.etiqueta,
+      linea: lKey,
+      grupo: lKey
+    };
+  }
+
+  let limite = null;
+  let tipo = "";
+  let notaTecnica = null;
+
+  // ============================================================
+  // MODO: Corta duración — cimentación (Tabla 1, col. 2-4)
+  // ============================================================
+  if (modoKey === "fundacion_corta") {
+
+    const c = CRITERIOS_DIN4150[lKey];
+
+    if (freq === null || freq === undefined || !Number.isFinite(Number(freq))) {
+      return {
+        estado: "gray",
+        texto: "La frecuencia es necesaria para evaluar la cimentación",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    limite = interpolarDINFundacion(c, freq);
+
+    if (limite === null) {
+      return {
+        estado: "gray",
+        texto: "Frecuencia fuera del rango aplicable de DIN 4150-3",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    tipo = "Valor guía en cimentación, dependiente de la frecuencia (Tabla 1, col. 2-4)";
+  }
+
+  // ============================================================
+  // MODO: Anexo B — cimentación con valor filtrado
+  // ============================================================
+  else if (modoKey === "fundacion_corta_anexoB") {
+
+    limite = ANEXO_B_VALORES[lKey];
+
+    if (!Number.isFinite(limite)) {
+      return {
+        estado: "gray",
+        texto: "Línea no válida para el método Anexo B",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    tipo = "Método alternativo por filtrado en frecuencia (Anexo B, Tabla B.1)";
+
+    if (ext.valorFiltrado !== null && ext.valorFiltrado !== undefined) {
+      // El ppv evaluado debe ser el valor filtrado
+      // Esto se gestiona en leerFormulario() antes de llamar a evaluar
+    }
+  }
+
+  // ============================================================
+  // MODO: Corta duración — piso superior horizontal (Tabla 1, col. 5)
+  // ============================================================
+  else if (modoKey === "piso_superior_corta") {
+    limite = CRITERIOS_DIN4150[lKey].pisoAlto;
+    tipo = "Valor guía en piso superior horizontal, todas las frecuencias (Tabla 1, col. 5)";
+  }
+
+  // ============================================================
+  // MODO: Corta duración — losa de piso vertical (Tabla 1, col. 6)
+  // ============================================================
+  else if (modoKey === "losa_corta") {
+    limite = CRITERIOS_DIN4150[lKey].losaCorta;
+    tipo = "Valor guía en losa de piso vertical, todas las frecuencias (Tabla 1, col. 6)";
+
+    // Nota técnica específica para Línea III (cláusula 5.1.2, nota "b")
+    if (lKey === "III") {
+      notaTecnica = "Para estructuras de Línea III en losa de piso, la norma DIN 4150-3:2016-12 (cláusula 5.1.2) prevé que pueda ser necesario rebajar notablemente este valor guía para evitar daño menor. El valor de tabla no exime del juicio técnico adicional.";
+    }
+  }
+
+  // ============================================================
+  // MODO: Arranque/parada de maquinaria (cláusula 6.3)
+  // Usa Tabla 1 col. 5-6 (piso superior 40/15/8 · losa 20)
+  // ============================================================
+  else if (modoKey === "arranque_parada") {
+
+    // Si la componente dominante es vertical, se asume evaluación de losa
+    // Si es horizontal, se asume evaluación de piso superior
+    // Por simplicidad, se aplica el más restrictivo (piso superior)
+    limite = CRITERIOS_DIN4150[lKey].pisoAlto;
+    tipo = "Arranque/parada de maquinaria — valores de corta duración aplicables (cláusula 6.3)";
+  }
+
+  // ============================================================
+  // MODO: Larga duración — piso superior (Tabla 4)
+  // ============================================================
+  else if (modoKey === "piso_superior_larga") {
+    limite = CRITERIOS_DIN4150[lKey].pisoLargo;
+    tipo = "Valor guía en piso superior horizontal, larga duración (Tabla 4)";
+  }
+
+  // ============================================================
+  // MODO: Larga duración — losa de piso (Tabla 4)
+  // ============================================================
+  else if (modoKey === "losa_larga") {
+    limite = CRITERIOS_DIN4150[lKey].losaLarga;
+    tipo = "Valor guía en losa de piso vertical, larga duración (Tabla 4)";
+
+    // Nota técnica específica para Línea III (cláusula 6.1.2, nota "a")
+    if (lKey === "III") {
+      notaTecnica = "Para estructuras de Línea III en losa de piso, la norma DIN 4150-3:2016-12 (cláusula 6.1.2) prevé que pueda ser necesario rebajar notablemente este valor guía para evitar daño menor. El valor de tabla no exime del juicio técnico adicional.";
+    }
+  }
+
+  // ============================================================
+  // MODO: Elementos estructurales masivos (cláusula 5.2)
+  // ============================================================
+  else if (modoKey === "elementos_masivos") {
+    limite = ELEMENTOS_MASIVOS_LIMITE;
+    tipo = "Valor guía para elementos estructurales masivos (cláusula 5.2) — estribos, bloques de cimentación";
+  }
+
+  // ============================================================
+  // MODO: Cavidades subterráneas (Tabla 2, cláusula 5.2)
+  // ============================================================
+  else if (modoKey === "cavidad_subterranea") {
+
+    const mat = ext.materialCavidad || "hormigon_armado";
+    const matConf = MATERIALES_CAVIDAD[mat];
+
+    if (!matConf) {
+      return {
+        estado: "gray",
+        texto: "Material de revestimiento no válido",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    limite = matConf.limite;
+    tipo = `Valor guía para revestimiento de cavidad subterránea (Tabla 2) — ${matConf.etiqueta}`;
+  }
+
+  // ============================================================
+  // MODO: Tuberías enterradas — corta duración (Tabla 3)
+  // ============================================================
+  else if (modoKey === "tuberia_corta") {
+
+    const mat = ext.materialTuberia || "acero_soldado";
+    const matConf = MATERIALES_TUBERIA[mat];
+
+    if (!matConf) {
+      return {
+        estado: "gray",
+        texto: "Material de tubería no válido",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    limite = matConf.limiteCorta;
+    tipo = `Valor guía para tubería enterrada, corta duración (Tabla 3) — ${matConf.etiqueta}`;
+  }
+
+  // ============================================================
+  // MODO: Tuberías enterradas — larga duración (Tabla 3, -50%)
+  // ============================================================
+  else if (modoKey === "tuberia_larga") {
+
+    const mat = ext.materialTuberia || "acero_soldado";
+    const matConf = MATERIALES_TUBERIA[mat];
+
+    if (!matConf) {
+      return {
+        estado: "gray",
+        texto: "Material de tubería no válido",
+        limite: null,
+        modo: modoKey,
+        modoEtiqueta: config.etiqueta,
+        linea: lKey,
+        grupo: lKey
+      };
+    }
+
+    limite = matConf.limiteLarga;
+    tipo = `Valor guía para tubería enterrada, larga duración (Tabla 3, reducción 50%) — ${matConf.etiqueta}`;
+  }
+
+  if (!Number.isFinite(limite)) {
+    return {
+      estado: "gray",
+      texto: "No existe un valor guía disponible para esta combinación",
+      limite: null,
+      modo: modoKey,
+      modoEtiqueta: config.etiqueta,
+      linea: lKey,
+      grupo: lKey
+    };
+  }
+
+  let estado;
+
+  if (ppv <= limite) {
+    if (ppv >= limite * 0.80) {
+      estado = "orange";
+    } else {
+      estado = "green";
+    }
+  } else {
+    estado = "red";
+  }
+
+  let texto;
+  if (estado === "green") texto = "DENTRO DEL VALOR GUÍA";
+  if (estado === "orange") texto = "VIGILANCIA — ≥ 80 % DEL VALOR GUÍA";
+  if (estado === "red") texto = "POR ENCIMA DEL VALOR GUÍA";
+
+  return {
+    estado,
+    texto,
+    limite,
+    tipo,
+    notaTecnica,
+    linea: lKey,
+    grupo: lKey,
+    modo: modoKey,
+    modoEtiqueta: config.etiqueta,
+    tipoMedicion: config.tipoMedicion,
+    tabla: config.tabla,
+    categoria: config.categoria,
+    frecuencia: freq,
+    ppv
+  };
+}
+
+
+function obtenerMayor(v, l, t, modo = "fundacion_corta"){
+  return obtenerComponenteDIN(v, l, t, modo);
+}
+
+
+/* ==========================================================
+   CAMPOS CONDICIONALES SEGÚN EL MODO
+   ========================================================== */
+
+function actualizarCamposCondicionales(){
+
+  const modoEl = document.getElementById("modoDIN");
+  if (!modoEl) return;
+
+  const modo = modoEl.value;
+  const config = DIN_MODOS[modo];
+
+  if (!config) return;
+
+  // Ocultar todos
+  document.querySelectorAll(".condicional").forEach(el => el.classList.remove("visible"));
+
+  // Mostrar según el modo
+  if (config.requiereMaterialCavidad) {
+    const el = document.getElementById("campoMaterialCavidad");
+    if (el) el.classList.add("visible");
+  }
+
+  if (config.requiereMaterialTuberia) {
+    const el = document.getElementById("campoMaterialTuberia");
+    if (el) el.classList.add("visible");
+  }
+
+  if (config.requiereValorFiltrado) {
+    const el = document.getElementById("campoValorFiltrado");
+    if (el) el.classList.add("visible");
+  }
+}
+
+
+/* ==========================================================
+   FORMULARIO
+   ========================================================== */
+
+function leerFormulario(){
+
+  const v = n(document.getElementById("v").value);
+  const l = n(document.getElementById("l").value);
+  const t = n(document.getElementById("t").value);
+  const freq = n(document.getElementById("frecuencia").value);
+
+  const modoDIN = document.getElementById("modoDIN")?.value || "fundacion_corta";
+
+  const config = DIN_MODOS[modoDIN];
+  if (!config) {
+    alert("Modo DIN no válido.");
+    return null;
+  }
+
+  // Determinar PPV a evaluar según el modo
+  let ppvEvaluada = null;
+  let componenteEvaluada = null;
+
+  // En modo Anexo B, el PPV evaluado es el valor filtrado (no las componentes)
+  if (modoDIN === "fundacion_corta_anexoB") {
+    const vf = n(document.getElementById("valorFiltrado")?.value);
+    if (vf !== null && vf > 0) {
+      ppvEvaluada = vf;
+      componenteEvaluada = "Valor filtrado (Anexo B)";
+    }
+  } else {
+    const mayor = obtenerMayor(v, l, t, modoDIN);
+    if (mayor) {
+      ppvEvaluada = mayor.valor;
+      componenteEvaluada = mayor.nombre;
+    }
+  }
+
+  const lineaValor = (document.getElementById("linea") || document.getElementById("grupo"))?.value || "II";
+  const linea = normalizarLinea(lineaValor);
+
+  // Materiales y valor filtrado (extras)
+  const materialCavidad = document.getElementById("materialCavidad")?.value || "hormigon_armado";
+  const materialTuberia = document.getElementById("materialTuberia")?.value || "acero_soldado";
+  const valorFiltrado = n(document.getElementById("valorFiltrado")?.value);
+
+  return {
+
+    id: document.getElementById("editId").value || uid(),
+
+    voladura: document.getElementById("voladura").value,
+    fecha: document.getElementById("fecha").value,
+    hora: document.getElementById("hora").value,
+    explotacion: document.getElementById("explotacion").value,
+    punto: document.getElementById("punto").value,
+    distancia: n(document.getElementById("distancia").value),
+
+    linea,
+    grupo: linea,
+
+    modoDIN,
+
+    materialCavidad,
+    materialTuberia,
+    valorFiltrado,
+
+    ubicacion:
+      modoDIN === "piso_superior_corta" ||
+      modoDIN === "piso_superior_larga" ||
+      modoDIN === "arranque_parada"
+        ? "piso_alto"
+        : "cimentacion",
+
+    estructura: document.getElementById("estructura").value,
+    cargaTotal: n(document.getElementById("cargaTotal").value),
+    cargaMIC: n(document.getElementById("cargaMIC").value),
+    barrenos: n(document.getElementById("barrenos").value),
+    secuencias: document.getElementById("secuencias").value,
+
+    fabricante: document.getElementById("fabricante").value,
+    modelo: document.getElementById("modelo").value,
+    serie: document.getElementById("serie").value,
+    obsEquipo: document.getElementById("obsEquipo").value,
+
+    vertical: v,
+    longitudinal: l,
+    transversal: t,
+
+    ppv: ppvEvaluada,
+    componente: componenteEvaluada,
+
+    frecuencia: freq,
+
+    metodoFrecuencia: document.getElementById("metodoFrecuencia").value,
+
+    desplazamiento: n(document.getElementById("desplazamiento").value),
+
+    observaciones: document.getElementById("observaciones").value,
+
+    creado: (() => {
+      const existente = mediciones.find(
+        x => x.id === (document.getElementById('editId').value || '')
+      );
+      return existente && existente.creado
+        ? existente.creado
+        : new Date().toISOString();
+    })()
+  };
+}
+
+
+/* ==========================================================
+   RESULTADO
+   ========================================================== */
+
+function mostrarResultado(m){
+
+  if (!m) {
+    document.getElementById("resultadoStatus").className = "status gray";
+    document.getElementById("resultadoStatus").innerHTML =
+      `<div class="big">Sin datos suficientes</div>
+       <div class="small">Completa el formulario.</div>`;
+    return;
+  }
+
+  const modo = m.modoDIN || normalizarModoDIN(null, m.ubicacion);
+  const config = DIN_MODOS[modo];
+  const requiereFrecuencia = config.requiereFrecuencia;
+
+  if (
+    !m ||
+    m.ppv === null ||
+    (requiereFrecuencia && m.frecuencia === null)
+  ) {
+    document.getElementById("resultadoStatus").className = "status gray";
+    document.getElementById("resultadoStatus").innerHTML =
+      `<div class="big">Sin datos suficientes</div>
+       <div class="small">
+        Introduce las componentes necesarias para el modo seleccionado.
+       </div>`;
+
+    document.getElementById("rPPV").textContent = "—";
+    document.getElementById("rComp").textContent = "—";
+    document.getElementById("rFreq").textContent = "—";
+    document.getElementById("rLimite").textContent = "—";
+    document.getElementById("rDetalle").innerHTML = "";
+    return;
+  }
+
+  const r = evaluar(
+    m.linea || m.grupo,
+    m.frecuencia,
+    m.ppv,
+    modo,
+    m.ubicacion,
+    {
+      materialCavidad: m.materialCavidad,
+      materialTuberia: m.materialTuberia,
+      valorFiltrado: m.valorFiltrado
+    }
+  );
+
+  document.getElementById("resultadoStatus").className = "status " + r.estado;
+
+  let smallText = esc(LINEA_DESCRIPCION_CORTA[r.linea] || "Línea " + r.linea)
+    + " · " + esc(r.modoEtiqueta || "");
+
+  document.getElementById("resultadoStatus").innerHTML =
+    `<div class="big">${r.texto}</div>
+     <div class="small">${smallText}</div>`;
+
+  document.getElementById("rPPV").textContent = fmt(m.ppv) + " mm/s";
+  document.getElementById("rComp").textContent = m.componente || "—";
+  document.getElementById("rFreq").textContent =
+    m.frecuencia === null ? "No requerida" : fmt(m.frecuencia) + " Hz";
+  document.getElementById("rLimite").textContent =
+    r.limite === null ? "—" : fmt(r.limite) + " mm/s";
+
+  let detalle =
+    `PPV máxima evaluada: <b>${fmt(m.ppv)} mm/s</b>.
+     Componente evaluada: <b>${esc(m.componente)}</b>.
+     <br>
+     Línea: <b>${esc(LINEA_DESCRIPCION[r.linea] || "Línea " + r.linea)}</b>.
+     <br>
+     Modo: <b>${esc(r.modoEtiqueta || modo)}</b>.`;
+
+  if (m.frecuencia !== null && config.requiereFrecuencia) {
+    detalle += `<br>Frecuencia principal: <b>${fmt(m.frecuencia)} Hz</b>.`;
+  }
+
+  if (r.limite !== null) {
+    const porcentaje = (m.ppv / r.limite) * 100;
+    detalle +=
+      `<br>
+       Valor guía DIN 4150-3: <b>${fmt(r.limite)} mm/s</b>.
+       Relación PPV/valor guía: <b>${fmt(porcentaje, 1)} %</b>.`;
+  }
+
+  // Información de material si aplica
+  if (modo === "cavidad_subterranea" && m.materialCavidad) {
+    const mat = MATERIALES_CAVIDAD[m.materialCavidad];
+    if (mat) {
+      detalle += `<br>Material del revestimiento: <b>${esc(mat.etiqueta)}</b>.`;
+    }
+  }
+
+  if ((modo === "tuberia_corta" || modo === "tuberia_larga") && m.materialTuberia) {
+    const mat = MATERIALES_TUBERIA[m.materialTuberia];
+    if (mat) {
+      detalle += `<br>Material de la tubería: <b>${esc(mat.etiqueta)}</b>.`;
+    }
+  }
+
+  detalle +=
+    `<br><br>
+     <b>Componentes registradas:</b>
+     Vertical ${fmt(m.vertical)} mm/s ·
+     Longitudinal ${fmt(m.longitudinal)} mm/s ·
+     Transversal ${fmt(m.transversal)} mm/s.`;
+
+  // Nota técnica (Línea III en losa)
+  if (r.notaTecnica) {
+    detalle +=
+      `<div class="alert-nota-tecnica" style="margin-top:14px">
+        <b>Nota técnica:</b> ${esc(r.notaTecnica)}
+      </div>`;
+  }
+
+  document.getElementById("rDetalle").innerHTML = detalle;
+}
+
+
+/* ==========================================================
+   CALCULAR
+   ========================================================== */
+
+function calcular(silencioso = false){
+
+  const m = leerFormulario();
+
+  if (!m) return null;
+
+  mostrarResultado(m);
+
+  medicionSeleccionada = m;
+
+  actualizarGraficaSeleccion(m);
+
+  return m;
+}
+
+
+/* ==========================================================
+   GUARDAR
+   ========================================================== */
+
+async function guardarMedicion(){
+
+  const m = calcular(true);
+
+  if (!m) return;
+
+  const modo = m.modoDIN || "fundacion_corta";
+  const config = DIN_MODOS[modo];
+  const requiereFrecuencia = config.requiereFrecuencia;
+
+  if (
+    m.ppv === null ||
+    (requiereFrecuencia && m.frecuencia === null)
+  ) {
+    alert(
+      requiereFrecuencia
+        ? "Introduce al menos una componente de PPV y la frecuencia principal."
+        : "Introduce al menos una componente de PPV válida para el modo seleccionado."
+    );
+    return;
+  }
+
+  const index = mediciones.findIndex(x => x.id === m.id);
+
+  if (index >= 0) {
+    mediciones[index] = m;
+  } else {
+    mediciones.push(m);
+  }
+
+  await saveData();
+
+  medicionSeleccionada = m;
+
+  const encontrada = mediciones.find(x => x.id === m.id);
+  if (encontrada) {
+    alert("Medición guardada correctamente en este dispositivo.");
+  } else {
+    alert("Error: No se pudo guardar la medición.");
+  }
+
+  renderHistorial();
+  actualizarDashboard();
+}
+
+
+/* ==========================================================
+   CARGAR MEDICIÓN (EDITAR)
+   ========================================================== */
+
+function cargarMedicion(id){
+
+  const m = mediciones.find(x => x.id === id);
+
+  if (!m) return;
+
+  medicionSeleccionada = m;
+
+  document.getElementById("editId").value = m.id;
+
+  const lineaNorm = normalizarLinea(m.linea || m.grupo || "II");
+
+  const fields = {
+    voladura: m.voladura,
+    fecha: m.fecha,
+    hora: m.hora,
+    explotacion: m.explotacion,
+    punto: m.punto,
+    distancia: m.distancia,
+    linea: lineaNorm,
+    grupo: lineaNorm,
+    modoDIN: m.modoDIN || normalizarModoDIN(null, m.ubicacion),
+    materialCavidad: m.materialCavidad || "hormigon_armado",
+    materialTuberia: m.materialTuberia || "acero_soldado",
+    valorFiltrado: m.valorFiltrado,
+    ubicacion: m.ubicacion || "cimentacion",
+    estructura: m.estructura,
+    cargaTotal: m.cargaTotal,
+    cargaMIC: m.cargaMIC,
+    barrenos: m.barrenos,
+    secuencias: m.secuencias,
+    fabricante: m.fabricante,
+    modelo: m.modelo,
+    serie: m.serie,
+    obsEquipo: m.obsEquipo,
+    v: m.vertical,
+    l: m.longitudinal,
+    t: m.transversal,
+    frecuencia: m.frecuencia,
+    metodoFrecuencia: m.metodoFrecuencia,
+    desplazamiento: m.desplazamiento,
+    observaciones: m.observaciones
+  };
+
+  Object.entries(fields).forEach(([id, val]) => {
+    const el = document.getElementById(id);
+    if (el) el.value = val ?? "";
+  });
+
+  document.getElementById("formTitle").textContent = "Editar medición";
+
+  // Actualizar campos condicionales según el modo cargado
+  actualizarCamposCondicionales();
+
+  mostrarResultado(m);
+
+  showTab("tab-nueva", document.querySelectorAll("nav button")[1]);
+}
+
+
+/* ==========================================================
+   ELIMINAR
+   ========================================================== */
+
+async function eliminarMedicion(id){
+
+  if (!confirm("¿Eliminar esta medición?")) return;
+
+  mediciones = mediciones.filter(x => x.id !== id);
+
+  await saveData();
+
+  renderHistorial();
+  actualizarDashboard();
+}
+
+
+/* ==========================================================
+   LIMPIAR
+   ========================================================== */
+
+function limpiarFormulario(){
+
+  document.querySelectorAll(
+    "#formCard input:not([type=hidden])," +
+    "#formCard textarea"
+  ).forEach(el => el.value = "");
+
+  const lineaEl = document.getElementById("linea") || document.getElementById("grupo");
+  if (lineaEl) lineaEl.value = "II";
+
+  const modoEl = document.getElementById("modoDIN");
+  if (modoEl) modoEl.value = "fundacion_corta";
+
+  const matCavEl = document.getElementById("materialCavidad");
+  if (matCavEl) matCavEl.value = "hormigon_armado";
+
+  const matTubEl = document.getElementById("materialTuberia");
+  if (matTubEl) matTubEl.value = "acero_soldado";
+
+  document.getElementById("metodoFrecuencia").selectedIndex = 0;
+
+  document.getElementById("editId").value = "";
+
+  document.getElementById("formTitle").textContent = "Nueva medición";
+
+  document.getElementById("resultadoStatus").className = "status gray";
+
+  document.getElementById("resultadoStatus").innerHTML =
+    `<div class="big">Sin calcular</div>
+     <div class="small">Introduce los valores de PPV y frecuencia.</div>`;
+
+  ["rPPV","rComp","rFreq","rLimite"].forEach(id =>
+    document.getElementById(id).textContent = "—"
+  );
+
+  document.getElementById("rDetalle").innerHTML = "";
+
+  medicionSeleccionada = null;
+
+  actualizarCamposCondicionales();
+
+  actualizarGraficaSeleccion(null);
+}
+
+</script>
+<script>
+
+/* ==========================================================
+   HISTORIAL
+   ========================================================== */
+
+function renderHistorial(){
+
+  const buscar = (document.getElementById("buscar")?.value || "").toLowerCase();
+  const estado = document.getElementById("filtroEstado")?.value || "";
+  const grupo = (document.getElementById("filtroGrupo")?.value || "").trim();
+
+  let data = mediciones.filter(m => {
+
+    const txt = [
+      m.voladura,
+      m.punto,
+      m.explotacion,
+      m.fabricante,
+      m.modelo,
+      m.serie
+    ].join(" ").toLowerCase();
+
+    if (buscar && !txt.includes(buscar)) return false;
+
+    const mLinea = normalizarLinea(m.linea || m.grupo || "II");
+
+    const r = evaluar(
+      mLinea,
+      m.frecuencia,
+      m.ppv,
+      m.modoDIN || m.ubicacion,
+      m.ubicacion,
+      {
+        materialCavidad: m.materialCavidad,
+        materialTuberia: m.materialTuberia,
+        valorFiltrado: m.valorFiltrado
+      }
+    );
+
+    if (estado && r.estado !== estado) return false;
+    if (grupo && mLinea !== grupo) return false;
+
+    return true;
+  });
+
+  data.sort((a,b) =>
+    String(b.fecha + b.hora).localeCompare(String(a.fecha + a.hora))
+  );
+
+  if (!data.length) {
+    document.getElementById("historialTable").innerHTML =
+      `<p class="help">No hay mediciones.</p>`;
+    return;
+  }
+
+  let html = `<table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Voladura</th>
+        <th>Punto</th>
+        <th>Sismógrafo</th>
+        <th>Distancia</th>
+        <th>PPV</th>
+        <th>Componente</th>
+        <th>Hz</th>
+        <th>Línea</th>
+        <th>Resultado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  data.forEach(m => {
+
+    const mLinea = normalizarLinea(m.linea || m.grupo || "II");
+
+    const r = evaluar(
+      mLinea,
+      m.frecuencia,
+      m.ppv,
+      m.modoDIN || m.ubicacion,
+      m.ubicacion,
+      {
+        materialCavidad: m.materialCavidad,
+        materialTuberia: m.materialTuberia,
+        valorFiltrado: m.valorFiltrado
+      }
+    );
+
+    const badge = `<span class="badge ${r.estado}">${r.texto}</span>`;
+
+    html += `<tr>
+      <td>${esc(m.fecha)} ${esc(m.hora)}</td>
+      <td>${esc(m.voladura)}</td>
+      <td>${esc(m.punto)}</td>
+      <td>${esc(m.fabricante)} ${esc(m.modelo)}</td>
+      <td>${fmt(m.distancia)} m</td>
+      <td>${fmt(m.ppv)} mm/s</td>
+      <td>${esc(m.componente)}</td>
+      <td>${fmt(m.frecuencia)} Hz</td>
+      <td title="${esc(LINEA_DESCRIPCION[mLinea])}">${esc(LINEA_DESCRIPCION_CORTA[mLinea])}</td>
+      <td>${badge}</td>
+      <td>
+        <button class="small-btn" onclick="cargarMedicion('${m.id}')">Editar</button>
+        <button class="small-btn" onclick="verInforme('${m.id}')">PDF</button>
+        <button class="small-btn" onclick="verGrafica('${m.id}')">Gráfica</button>
+        <button class="small-btn" onclick="eliminarMedicion('${m.id}')">Eliminar</button>
+      </td>
+    </tr>`;
+  });
+
+  html += `</tbody></table>`;
+
+  document.getElementById("historialTable").innerHTML = html;
+}
+
+
+/* ==========================================================
+   DASHBOARD
+   ========================================================== */
+
+function actualizarDashboard(){
+
+  let green = 0;
+  let orange = 0;
+  let red = 0;
+
+  mediciones.forEach(m => {
+
+    const mLinea = normalizarLinea(m.linea || m.grupo || "II");
+
+    const r = evaluar(
+      mLinea,
+      m.frecuencia,
+      m.ppv,
+      m.modoDIN || m.ubicacion,
+      m.ubicacion,
+      {
+        materialCavidad: m.materialCavidad,
+        materialTuberia: m.materialTuberia,
+        valorFiltrado: m.valorFiltrado
+      }
+    );
+
+    if (r.estado === "green") green++;
+    if (r.estado === "orange") orange++;
+    if (r.estado === "red") red++;
+  });
+
+  document.getElementById("kpiTotal").textContent = mediciones.length;
+  document.getElementById("kpiGreen").textContent = green;
+  document.getElementById("kpiOrange").textContent = orange;
+  document.getElementById("kpiRed").textContent = red;
+
+  const ultimas = [...mediciones]
+    .sort((a,b) =>
+      String(b.fecha + b.hora).localeCompare(String(a.fecha + a.hora))
+    )
+    .slice(0, 30);
+
+  if (!ultimas.length) {
+    document.getElementById("dashboardTable").innerHTML =
+      `<p class="help">Todavía no hay mediciones.</p>`;
+    return;
+  }
+
+  let html = `<table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Voladura</th>
+        <th>Punto</th>
+        <th>PPV</th>
+        <th>Hz</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>`;
+
+  ultimas.forEach(m => {
+
+    const mLinea = normalizarLinea(m.linea || m.grupo || "II");
+
+    const r = evaluar(
+      mLinea,
+      m.frecuencia,
+      m.ppv,
+      m.modoDIN || m.ubicacion,
+      m.ubicacion,
+      {
+        materialCavidad: m.materialCavidad,
+        materialTuberia: m.materialTuberia,
+        valorFiltrado: m.valorFiltrado
+      }
+    );
+
+    html += `<tr>
+      <td>${esc(m.fecha)}</td>
+      <td>${esc(m.voladura)}</td>
+      <td>${esc(m.punto)}</td>
+      <td>${fmt(m.ppv)} mm/s</td>
+      <td>${fmt(m.frecuencia)} Hz</td>
+      <td><span class="badge ${r.estado}">${r.texto}</span></td>
+    </tr>`;
+  });
+
+  html += "</tbody></table>";
+
+  document.getElementById("dashboardTable").innerHTML = html;
+}
+
+
+/* ==========================================================
+   GRÁFICA SVG INTERACTIVA — DIN 4150-3
+   ========================================================== */
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+// Configuración del área de gráfica
+const CHART_CONFIG = {
+  left: 85,
+  right: 245,
+  top: 40,
+  bottom: 65,
+  xmin: 1,
+  xmax: 200,
+  ymin: 1,
+  ymax: 150
+};
+
+let chartState = {
+  W: 900,
+  H: 560,
+  left: 85,
+  right: 245,
+  top: 40,
+  bottom: 65,
+  pw: 0,
+  ph: 0,
+  modo: "fundacion_corta",
+  medicion: null
+};
+
+
+/* ─────────────────────────────────────────────
+   Funciones de proyección logarítmica
+   ───────────────────────────────────────────── */
+
+function chartLx(x, state) {
+  return state.left +
+    (Math.log10(x) - Math.log10(CHART_CONFIG.xmin)) /
+    (Math.log10(CHART_CONFIG.xmax) - Math.log10(CHART_CONFIG.xmin)) *
+    state.pw;
+}
+
+function chartLy(y, state) {
+  return state.top +
+    (Math.log10(CHART_CONFIG.ymax) - Math.log10(y)) /
+    (Math.log10(CHART_CONFIG.ymax) - Math.log10(CHART_CONFIG.ymin)) *
+    state.ph;
+}
+
+
+/* ─────────────────────────────────────────────
+   Crear elemento SVG helper
+   ───────────────────────────────────────────── */
+
+function svgEl(tag, attrs = {}) {
+  const el = document.createElementNS(SVG_NS, tag);
+  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+  return el;
+}
+
+
+/* ─────────────────────────────────────────────
+   Dibujar gráfica completa
+   ───────────────────────────────────────────── */
+
+function dibujarGrafica() {
+
+  const svg = document.getElementById("chartSvg");
+  if (!svg) return;
+
+  // Limpiar
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+  const wrapper = svg.parentElement;
+  const rect = wrapper.getBoundingClientRect();
+
+  const W = Math.max(rect.width || 900, 600);
+  const H = 560;
+
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("width", W);
+  svg.setAttribute("height", H);
+  svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+  const state = {
+    W,
+    H,
+    left: CHART_CONFIG.left,
+    right: CHART_CONFIG.right,
+    top: CHART_CONFIG.top,
+    bottom: CHART_CONFIG.bottom,
+    pw: W - CHART_CONFIG.left - CHART_CONFIG.right,
+    ph: H - CHART_CONFIG.top - CHART_CONFIG.bottom,
+    modo: medicionSeleccionada?.modoDIN || "fundacion_corta",
+    medicion: medicionSeleccionada
+  };
+
+  chartState = state;
+
+  // Fondo
+  svg.appendChild(svgEl("rect", {
+    x: 0, y: 0, width: W, height: H, fill: "#ffffff"
+  }));
+
+  // Título superior
+  const titulo = svgEl("text", {
+    x: state.left,
+    y: 22,
+    "font-family": "Arial, sans-serif",
+    "font-size": "12",
+    "font-weight": "bold",
+    fill: "#667085"
+  });
+  titulo.textContent = "DIN 4150-3:2016-12 · " + (DIN_MODOS[state.modo]?.etiqueta || "");
+  svg.appendChild(titulo);
+
+  // Grid
+  dibujarGridSVG(svg, state);
+
+  // Ejes
+  dibujarEjesSVG(svg, state);
+
+  // Curvas DIN (solo para modos de edificio con curvas por frecuencia)
+  const categoria = DIN_MODOS[state.modo]?.categoria;
+  const modo = state.modo;
+
+  if (categoria === "edificio") {
+
+    // Modos con curvas variables por frecuencia (Tabla 1 fundación)
+    if (modo === "fundacion_corta") {
+      dibujarCurvaSVG(svg, state, "I",   "#16803c");
+      dibujarCurvaSVG(svg, state, "II",  "#245b86");
+      dibujarCurvaSVG(svg, state, "III", "#b42318");
+    }
+    // Modos con valor fijo (piso superior, losa, larga duración, arranque)
+    else {
+      dibujarLineaFijaSVG(svg, state, "I",   CRITERIOS_DIN4150["I"][getCampoLimite(modo)],   "#16803c");
+      dibujarLineaFijaSVG(svg, state, "II",  CRITERIOS_DIN4150["II"][getCampoLimite(modo)],  "#245b86");
+      dibujarLineaFijaSVG(svg, state, "III", CRITERIOS_DIN4150["III"][getCampoLimite(modo)], "#b42318");
+    }
+  }
+  else if (modo === "elementos_masivos") {
+    dibujarLineaFijaSVG(svg, state, "I",   80, "#16803c");
+    dibujarLineaFijaSVG(svg, state, "II",  80, "#245b86");
+    dibujarLineaFijaSVG(svg, state, "III", 80, "#b42318");
+  }
+  else if (modo === "cavidad_subterranea") {
+    dibujarLineaFijaSVG(svg, state, "I",   80, "#16803c");
+    dibujarLineaFijaSVG(svg, state, "II",  60, "#245b86");
+    dibujarLineaFijaSVG(svg, state, "III", 40, "#b42318");
+  }
+  else if (modo === "tuberia_corta") {
+    dibujarLineaFijaSVG(svg, state, "I",   100, "#16803c");
+    dibujarLineaFijaSVG(svg, state, "II",  80,  "#245b86");
+    dibujarLineaFijaSVG(svg, state, "III", 50,  "#b42318");
+  }
+  else if (modo === "tuberia_larga") {
+    dibujarLineaFijaSVG(svg, state, "I",   50, "#16803c");
+    dibujarLineaFijaSVG(svg, state, "II",  40, "#245b86");
+    dibujarLineaFijaSVG(svg, state, "III", 25, "#b42318");
+  }
+  else if (modo === "fundacion_corta_anexoB") {
+    dibujarLineaFijaSVG(svg, state, "I",   ANEXO_B_VALORES["I"],   "#16803c");
+    dibujarLineaFijaSVG(svg, state, "II",  ANEXO_B_VALORES["II"],  "#245b86");
+    dibujarLineaFijaSVG(svg, state, "III", ANEXO_B_VALORES["III"], "#b42318");
+  }
+
+  // Puntos de componentes
+  if (state.medicion && state.medicion.frecuencia > 0) {
+    dibujarComponentesSVG(svg, state);
+  }
+
+  // Títulos de ejes
+  dibujarTitulosEjesSVG(svg, state);
+
+  // Leyenda
+  dibujarLeyendaSVG(svg, state);
+}
+
+
+/* ─────────────────────────────────────────────
+   Helper: campo de límite según el modo
+   ───────────────────────────────────────────── */
+
+function getCampoLimite(modo) {
+  switch(modo) {
+    case "piso_superior_corta":
+    case "arranque_parada":
+      return "pisoAlto";
+    case "losa_corta":
+      return "losaCorta";
+    case "piso_superior_larga":
+      return "pisoLargo";
+    case "losa_larga":
+      return "losaLarga";
+    default:
+      return "pisoAlto";
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   Grid SVG
+   ───────────────────────────────────────────── */
+
+function dibujarGridSVG(svg, state) {
+
+  const xticks = [1, 2, 5, 10, 20, 50, 100, 200];
+  const yticks = [1, 2, 5, 10, 20, 40, 50, 100, 150];
+
+  const g = svgEl("g", {
+    stroke: "#e5e7eb",
+    "stroke-width": "1"
+  });
+
+  xticks.forEach(x => {
+    const px = chartLx(x, state);
+    g.appendChild(svgEl("line", {
+      x1: px, y1: state.top,
+      x2: px, y2: state.top + state.ph
+    }));
+  });
+
+  yticks.forEach(y => {
+    const py = chartLy(y, state);
+    g.appendChild(svgEl("line", {
+      x1: state.left, y1: py,
+      x2: state.left + state.pw, y2: py
+    }));
+  });
+
+  svg.appendChild(g);
+
+  // Etiquetas
+  const gl = svgEl("g", {
+    "font-family": "Arial, sans-serif",
+    "font-size": "11",
+    fill: "#667085"
+  });
+
+  xticks.forEach(x => {
+    const px = chartLx(x, state);
+    const t = svgEl("text", {
+      x: px - 8,
+      y: state.top + state.ph + 20
+    });
+    t.textContent = String(x);
+    gl.appendChild(t);
+  });
+
+  yticks.forEach(y => {
+    const py = chartLy(y, state);
+    const t = svgEl("text", {
+      x: 42,
+      y: py + 4
+    });
+    t.textContent = String(y);
+    gl.appendChild(t);
+  });
+
+  svg.appendChild(gl);
+}
+
+
+/* ─────────────────────────────────────────────
+   Ejes SVG
+   ───────────────────────────────────────────── */
+
+function dibujarEjesSVG(svg, state) {
+
+  const g = svgEl("g", {
+    stroke: "#344054",
+    "stroke-width": "1.5",
+    fill: "none"
+  });
+
+  g.appendChild(svgEl("line", {
+    x1: state.left, y1: state.top,
+    x2: state.left, y2: state.top + state.ph
+  }));
+
+  g.appendChild(svgEl("line", {
+    x1: state.left, y1: state.top + state.ph,
+    x2: state.left + state.pw, y2: state.top + state.ph
+  }));
+
+  svg.appendChild(g);
+}
+
+
+/* ─────────────────────────────────────────────
+   Curva DIN (variable por frecuencia — Tabla 1)
+   ───────────────────────────────────────────── */
+
+function dibujarCurvaSVG(svg, state, linea, color) {
+
+  const c = CRITERIOS_DIN4150[linea];
+  if (!c) return;
+
+  const puntos = [];
+  const steps = 300;
+
+  for (let i = 0; i <= steps; i++) {
+
+    const f = CHART_CONFIG.xmin *
+      Math.pow(CHART_CONFIG.xmax / CHART_CONFIG.xmin, i / steps);
+
+    let v = interpolarDINFundacion(c, f);
+
+    if (v === null || !Number.isFinite(v)) continue;
+
+    v = Math.max(CHART_CONFIG.ymin, Math.min(CHART_CONFIG.ymax, v));
+
+    puntos.push({
+      x: chartLx(f, state),
+      y: chartLy(v, state),
+      f, v
+    });
+  }
+
+  if (!puntos.length) return;
+
+  const d = puntos.map((p, i) =>
+    (i === 0 ? "M" : "L") + p.x.toFixed(2) + "," + p.y.toFixed(2)
+  ).join(" ");
+
+  const path = svgEl("path", {
+    d,
+    fill: "none",
+    stroke: color,
+    "stroke-width": "3",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+    "data-linea": linea,
+    style: "cursor: crosshair; pointer-events: stroke;"
+  });
+
+  svg.appendChild(path);
+
+  // Puntos invisibles para detección de hover
+  const gHover = svgEl("g", {
+    fill: "transparent",
+    "pointer-events": "all"
+  });
+
+  const step = Math.max(1, Math.floor(puntos.length / 60));
+
+  for (let i = 0; i < puntos.length; i += step) {
+    const p = puntos[i];
+    const c2 = svgEl("circle", {
+      cx: p.x,
+      cy: p.y,
+      r: 6,
+      fill: "transparent",
+      style: "cursor: crosshair;"
+    });
+
+    c2.addEventListener("mouseenter", (ev) =>
+      mostrarTooltipCurva(ev, linea, p.f, p.v, color)
+    );
+
+    c2.addEventListener("mousemove", moverTooltip);
+    c2.addEventListener("mouseleave", ocultarTooltip);
+
+    gHover.appendChild(c2);
+  }
+
+  svg.appendChild(gHover);
+}
+
+
+/* ─────────────────────────────────────────────
+   Línea fija horizontal (para modos sin frecuencia)
+   ───────────────────────────────────────────── */
+
+function dibujarLineaFijaSVG(svg, state, linea, valor, color) {
+
+  if (!Number.isFinite(valor)) return;
+
+  const v = Math.max(CHART_CONFIG.ymin, Math.min(CHART_CONFIG.ymax, valor));
+  const y = chartLy(v, state);
+
+  const line = svgEl("line", {
+    x1: state.left,
+    y1: y,
+    x2: state.left + state.pw,
+    y2: y,
+    stroke: color,
+    "stroke-width": "3",
+    "stroke-linecap": "round",
+    "data-linea": linea,
+    style: "cursor: crosshair; pointer-events: stroke;"
+  });
+
+  svg.appendChild(line);
+
+  // Zona de detección de hover sobre la línea
+  const hit = svgEl("line", {
+    x1: state.left,
+    y1: y,
+    x2: state.left + state.pw,
+    y2: y,
+    stroke: "transparent",
+    "stroke-width": "16",
+    style: "cursor: crosshair; pointer-events: stroke;"
+  });
+
+  hit.addEventListener("mouseenter", (ev) =>
+    mostrarTooltipLineaFija(ev, linea, valor, color)
+  );
+  hit.addEventListener("mousemove", moverTooltip);
+  hit.addEventListener("mouseleave", ocultarTooltip);
+
+  svg.appendChild(hit);
+}
+
+
+/* ─────────────────────────────────────────────
+   Componentes (puntos)
+   ───────────────────────────────────────────── */
+
+function dibujarComponentesSVG(svg, state) {
+
+  const m = state.medicion;
+
+  const componentes = [
+    { nombre: "Vertical",     valor: m.vertical,     color: "#e53935", tipo: "star"   },
+    { nombre: "Longitudinal", valor: m.longitudinal, color: "#16803c", tipo: "square" },
+    { nombre: "Transversal",  valor: m.transversal,  color: "#9b59b6", tipo: "cross"  }
+  ];
+
+  const modo = m.modoDIN || "fundacion_corta";
+
+  const permitidas =
+    modo === "piso_superior_corta" || modo === "piso_superior_larga"
+      ? ["Longitudinal", "Transversal"]
+      : modo === "losa_corta" || modo === "losa_larga"
+      ? ["Vertical"]
+      : ["Vertical", "Longitudinal", "Transversal"];
+
+  const validas = componentes.filter(x =>
+    permitidas.includes(x.nombre) &&
+    x.valor !== null &&
+    x.valor > 0
+  );
+
+  if (!validas.length) return;
+
+  let maxComp = validas[0];
+  validas.forEach(c => { if (c.valor > maxComp.valor) maxComp = c; });
+
+  const r = evaluar(
+    m.linea || m.grupo,
+    m.frecuencia,
+    maxComp.valor,
+    modo,
+    m.ubicacion,
+    {
+      materialCavidad: m.materialCavidad,
+      materialTuberia: m.materialTuberia,
+      valorFiltrado: m.valorFiltrado
+    }
+  );
+
+  const estadoColor =
+    r.estado === "green" ? "#16803c" :
+    r.estado === "orange" ? "#f59e0b" :
+    r.estado === "red" ? "#b42318" : "#667085";
+
+  const offsets = { Vertical: -7, Longitudinal: 0, Transversal: 7 };
+
+  const g = svgEl("g");
+
+  validas.forEach(c => {
+
+    const x = chartLx(m.frecuencia, state) + offsets[c.nombre];
+    const y = chartLy(c.valor, state);
+
+    const esMax = c.nombre === maxComp.nombre;
+
+    // Aro exterior si es la máxima
+    if (esMax) {
+      g.appendChild(svgEl("circle", {
+        cx: x, cy: y, r: 12,
+        fill: "none",
+        stroke: estadoColor,
+        "stroke-width": 3
+      }));
+    }
+
+    // Símbolo
+    if (c.tipo === "square") {
+      const rect = svgEl("rect", {
+        x: x - 6, y: y - 6,
+        width: 12, height: 12,
+        fill: c.color,
+        style: "cursor: pointer;"
+      });
+      g.appendChild(rect);
+
+    } else if (c.tipo === "star") {
+      const star = svgEl("path", {
+        d: estrellaPath(x, y, 8, 4, 5),
+        fill: c.color,
+        style: "cursor: pointer;"
+      });
+      g.appendChild(star);
+
+    } else if (c.tipo === "cross") {
+      const cross = svgEl("path", {
+        d: `M${x-7},${y-7} L${x+7},${y+7} M${x+7},${y-7} L${x-7},${y+7}`,
+        stroke: c.color,
+        "stroke-width": 2.5,
+        fill: "none",
+        "stroke-linecap": "round",
+        style: "cursor: pointer;"
+      });
+      g.appendChild(cross);
+    }
+
+    // Zona de detección ampliada para tooltip
+    const hit = svgEl("circle", {
+      cx: x, cy: y, r: 16,
+      fill: "transparent",
+      "pointer-events": "all",
+      style: "cursor: pointer;"
+    });
+
+    hit.addEventListener("mouseenter", (ev) =>
+      mostrarTooltipComponente(ev, c, m, r, esMax)
+    );
+    hit.addEventListener("mousemove", moverTooltip);
+    hit.addEventListener("mouseleave", ocultarTooltip);
+
+    g.appendChild(hit);
+
+    // Etiqueta
+    const etiqueta = svgEl("text", {
+      x: x + 15,
+      y: y - 10,
+      "font-family": "Arial, sans-serif",
+      "font-size": "11",
+      "font-weight": "bold",
+      fill: c.color,
+      "pointer-events": "none"
+    });
+
+    let txt = `${c.nombre}: ${fmt(c.valor)} mm/s`;
+    if (esMax) txt += "  ← PPV máx.";
+
+    // Evitar desbordamiento por la derecha
+    if (x + 15 + txt.length * 6 > state.left + state.pw) {
+      etiqueta.setAttribute("x", x - 150);
+    }
+
+    etiqueta.textContent = txt;
+    g.appendChild(etiqueta);
+  });
+
+  // Línea vertical de frecuencia
+  const fx = chartLx(m.frecuencia, state);
+
+  g.appendChild(svgEl("line", {
+    x1: fx, y1: state.top,
+    x2: fx, y2: state.top + state.ph + 20,
+    stroke: "rgba(23,50,77,.35)",
+    "stroke-width": 1,
+    "stroke-dasharray": "5,5"
+  }));
+
+  // Etiqueta de frecuencia arriba
+  const labelF = svgEl("text", {
+    x: fx + 8,
+    y: 30,
+    "font-family": "Arial, sans-serif",
+    "font-size": "11",
+    "font-weight": "bold",
+    fill: "#344054"
+  });
+  labelF.textContent = `f = ${fmt(m.frecuencia)} Hz`;
+  g.appendChild(labelF);
+
+  svg.appendChild(g);
+}
+
+
+/* ─────────────────────────────────────────────
+   Path de estrella
+   ───────────────────────────────────────────── */
+
+function estrellaPath(cx, cy, outer, inner, points) {
+  let d = "";
+  for (let i = 0; i < points * 2; i++) {
+    const radius = i % 2 === 0 ? outer : inner;
+    const angle = -Math.PI / 2 + i * Math.PI / points;
+    const x = cx + Math.cos(angle) * radius;
+    const y = cy + Math.sin(angle) * radius;
+    d += (i === 0 ? "M" : "L") + x.toFixed(2) + "," + y.toFixed(2);
+  }
+  d += "Z";
+  return d;
+}
+
+
+/* ─────────────────────────────────────────────
+   Títulos de ejes
+   ───────────────────────────────────────────── */
+
+function dibujarTitulosEjesSVG(svg, state) {
+
+  const tX = svgEl("text", {
+    x: state.left + state.pw / 2 - 50,
+    y: state.H - 15,
+    "font-family": "Arial, sans-serif",
+    "font-size": "14",
+    "font-weight": "bold",
+    fill: "#17324d"
+  });
+  tX.textContent = "Frecuencia (Hz)";
+  svg.appendChild(tX);
+
+  const tY = svgEl("text", {
+    x: 18,
+    y: state.top + state.ph / 2 + 100,
+    "font-family": "Arial, sans-serif",
+    "font-size": "14",
+    "font-weight": "bold",
+    fill: "#17324d",
+    transform: `rotate(-90, 18, ${state.top + state.ph / 2 + 100})`
+  });
+  tY.textContent = "Velocidad de vibración (mm/s)";
+  svg.appendChild(tY);
+}
+
+
+/* ─────────────────────────────────────────────
+   Leyenda SVG
+   ───────────────────────────────────────────── */
+
+function dibujarLeyendaSVG(svg, state) {
+
+  const x = state.W - 225;
+  const y = 70;
+  const width = 205;
+  const height = 330;
+
+  // Panel
+  svg.appendChild(svgEl("rect", {
+    x, y, width, height, rx: 8,
+    fill: "rgba(255,255,255,.96)",
+    stroke: "#d0d5dd",
+    "stroke-width": 1
+  }));
+
+  const g = svgEl("g", {
+    "font-family": "Arial, sans-serif"
+  });
+
+  // Título
+  const t = svgEl("text", {
+    x: x + 14, y: y + 23,
+    "font-size": "13", "font-weight": "bold",
+    fill: "#17324d"
+  });
+  t.textContent = "DIN 4150-3 · VALORES GUÍA";
+  g.appendChild(t);
+
+  let yy = y + 48;
+
+  // Subtítulo
+  const st = svgEl("text", {
+    x: x + 14, y: yy,
+    "font-size": "11", "font-weight": "bold",
+    fill: "#667085"
+  });
+  st.textContent = "LÍMITES (" + (DIN_MODOS[state.modo]?.tabla || "Tabla 1") + ")";
+  g.appendChild(st);
+
+  yy += 22;
+
+  // Líneas de leyenda (siempre las 3 líneas, aunque el modo no las use)
+  const lineas = [
+    { color: "#16803c", texto: "Línea I — Comercial / Industrial" },
+    { color: "#245b86", texto: "Línea II — Viviendas / Residencial" },
+    { color: "#b42318", texto: "Línea III — Sensible / Catalogada" }
+  ];
+
+  lineas.forEach(l => {
+
+    g.appendChild(svgEl("line", {
+      x1: x + 14, y1: yy,
+      x2: x + 39, y2: yy,
+      stroke: l.color,
+      "stroke-width": 3
+    }));
+
+    const txt = svgEl("text", {
+      x: x + 45, y: yy + 4,
+      "font-size": "10",
+      fill: "#344054"
+    });
+    txt.textContent = l.texto;
+    g.appendChild(txt);
+
+    yy += 22;
+  });
+
+  yy += 12;
+
+  // Estado
+  const st2 = svgEl("text", {
+    x: x + 14, y: yy,
+    "font-size": "11", "font-weight": "bold",
+    fill: "#667085"
+  });
+  st2.textContent = "ESTADO PPV MÁX.";
+  g.appendChild(st2);
+
+  yy += 22;
+
+  const estados = [
+    { color: "#16803c", texto: "Dentro del valor guía" },
+    { color: "#f59e0b", texto: "Vigilancia (≥ 80 %)" },
+    { color: "#b42318", texto: "Por encima del valor guía" }
+  ];
+
+  estados.forEach(e => {
+    g.appendChild(svgEl("circle", {
+      cx: x + 22, cy: yy, r: 7,
+      fill: "none",
+      stroke: e.color,
+      "stroke-width": 3
+    }));
+
+    const txt = svgEl("text", {
+      x: x + 38, y: yy + 4,
+      "font-size": "10",
+      fill: "#344054"
+    });
+    txt.textContent = e.texto;
+    g.appendChild(txt);
+
+    yy += 26;
+  });
+
+  yy += 12;
+
+  // Componentes
+  const st3 = svgEl("text", {
+    x: x + 14, y: yy,
+    "font-size": "11", "font-weight": "bold",
+    fill: "#667085"
+  });
+  st3.textContent = "COMPONENTES";
+  g.appendChild(st3);
+
+  yy += 23;
+
+  const comps = [
+    { sim: "★", color: "#e53935", texto: "Vertical" },
+    { sim: "■", color: "#16803c", texto: "Longitudinal" },
+    { sim: "✕", color: "#9b59b6", texto: "Transversal" }
+  ];
+
+  comps.forEach(c => {
+
+    const s = svgEl("text", {
+      x: x + 18, y: yy,
+      "font-size": "16", "font-weight": "bold",
+      fill: c.color
+    });
+    s.textContent = c.sim;
+    g.appendChild(s);
+
+    const txt = svgEl("text", {
+      x: x + 40, y: yy,
+      "font-size": "11",
+      fill: "#344054"
+    });
+    txt.textContent = "Componente " + c.texto;
+    g.appendChild(txt);
+
+    yy += 25;
+  });
+
+  svg.appendChild(g);
+}
+
+
+/* ─────────────────────────────────────────────
+   TOOLTIPS
+   ───────────────────────────────────────────── */
+
+function mostrarTooltipComponente(ev, comp, m, r, esMax) {
+
+  const tooltip = document.getElementById("chartTooltip");
+  if (!tooltip) return;
+
+  const porcentaje = r.limite ? (comp.valor / r.limite) * 100 : null;
+
+  tooltip.innerHTML = `
+    <div class="tt-title">${esc(comp.nombre)}${esMax ? " · PPV máxima" : ""}</div>
+    <div class="tt-row"><span class="tt-label">PPV:</span><span class="tt-value">${fmt(comp.valor)} mm/s</span></div>
+    <div class="tt-row"><span class="tt-label">Frecuencia:</span><span class="tt-value">${fmt(m.frecuencia)} Hz</span></div>
+    <div class="tt-row"><span class="tt-label">Línea:</span><span class="tt-value">${esc(r.linea)}</span></div>
+    <div class="tt-row"><span class="tt-label">Tabla:</span><span class="tt-value">${esc(r.tabla || "—")}</span></div>
+    <div class="tt-row"><span class="tt-label">Valor guía:</span><span class="tt-value">${r.limite !== null ? fmt(r.limite) + " mm/s" : "—"}</span></div>
+    ${porcentaje !== null ? `<div class="tt-row"><span class="tt-label">PPV/guía:</span><span class="tt-value">${fmt(porcentaje,1)} %</span></div>` : ""}
+    <div class="tt-status ${r.estado}">${esc(r.texto)}</div>
+  `;
+
+  tooltip.classList.add("visible");
+  moverTooltip(ev);
+}
+
+
+function mostrarTooltipCurva(ev, linea, f, v, color) {
+
+  const tooltip = document.getElementById("chartTooltip");
+  if (!tooltip) return;
+
+  tooltip.innerHTML = `
+    <div class="tt-title" style="color:${color}">Valor guía DIN 4150-3 · Línea ${esc(linea)}</div>
+    <div class="tt-row"><span class="tt-label">Frecuencia:</span><span class="tt-value">${fmt(f,2)} Hz</span></div>
+    <div class="tt-row"><span class="tt-label">Límite:</span><span class="tt-value">${fmt(v,2)} mm/s</span></div>
+    <div class="tt-row"><span class="tt-label">Tabla:</span><span class="tt-value">${esc(DIN_MODOS[chartState.modo]?.tabla || "—")}</span></div>
+  `;
+
+  tooltip.classList.add("visible");
+  moverTooltip(ev);
+}
+
+
+function mostrarTooltipLineaFija(ev, linea, valor, color) {
+
+  const tooltip = document.getElementById("chartTooltip");
+  if (!tooltip) return;
+
+  tooltip.innerHTML = `
+    <div class="tt-title" style="color:${color}">Valor guía DIN 4150-3 · Línea ${esc(linea)}</div>
+    <div class="tt-row"><span class="tt-label">Límite:</span><span class="tt-value">${fmt(valor,2)} mm/s</span></div>
+    <div class="tt-row"><span class="tt-label">Tabla:</span><span class="tt-value">${esc(DIN_MODOS[chartState.modo]?.tabla || "—")}</span></div>
+    <div class="tt-row"><span class="tt-label">Modo:</span><span class="tt-value">${esc(DIN_MODOS[chartState.modo]?.etiqueta || "—")}</span></div>
+  `;
+
+  tooltip.classList.add("visible");
+  moverTooltip(ev);
+}
+
+
+function moverTooltip(ev) {
+
+  const tooltip = document.getElementById("chartTooltip");
+  if (!tooltip || !tooltip.classList.contains("visible")) return;
+
+  const wrapper = document.querySelector(".chart-wrapper");
+  if (!wrapper) return;
+
+  const rect = wrapper.getBoundingClientRect();
+  const x = ev.clientX - rect.left;
+  const y = ev.clientY - rect.top;
+
+  const ttRect = tooltip.getBoundingClientRect();
+  const ttW = ttRect.width || 220;
+  const ttH = ttRect.height || 140;
+
+  let left = x + 15;
+  let top = y + 15;
+
+  if (left + ttW > rect.width) left = x - ttW - 15;
+  if (top + ttH > rect.height) top = y - ttH - 15;
+  if (left < 0) left = 8;
+  if (top < 0) top = 8;
+
+  tooltip.style.left = left + "px";
+  tooltip.style.top = top + "px";
+}
+
+
+function ocultarTooltip() {
+  const tooltip = document.getElementById("chartTooltip");
+  if (tooltip) tooltip.classList.remove("visible");
+}
+
+
+/* ─────────────────────────────────────────────
+   Actualizar gráfica con medición seleccionada
+   ───────────────────────────────────────────── */
+
+function actualizarGraficaSeleccion(m) {
+
+  medicionSeleccionada = m;
+
+  if (m) {
+    document.getElementById("chartFreq").textContent = fmt(m.frecuencia) + " Hz";
+    document.getElementById("chartPPV").textContent = fmt(m.ppv) + " mm/s";
+
+    const lVal = normalizarLinea(m.linea || m.grupo || "—");
+    document.getElementById("chartGroup").textContent = LINEA_DESCRIPCION_CORTA[lVal] || "—";
+  } else {
+    document.getElementById("chartFreq").textContent = "—";
+    document.getElementById("chartPPV").textContent = "—";
+    document.getElementById("chartGroup").textContent = "—";
+  }
+
+  dibujarGrafica();
+}
+
+
+function verGrafica(id) {
+
+  const m = mediciones.find(x => x.id === id);
+  if (!m) return;
+
+  medicionSeleccionada = m;
+
+  actualizarGraficaSeleccion(m);
+
+  showTab("tab-grafica", document.querySelectorAll("nav button")[3]);
+}
+
+
+/* ==========================================================
+   ESTUDIO DE PROPAGACIÓN
+   ========================================================== */
+
+function calcularEstudio() {
+
+  const datos = mediciones.filter(m =>
+    Number.isFinite(m.ppv) &&
+    Number.isFinite(m.distancia) &&
+    m.ppv > 0 &&
+    m.distancia > 0
+  );
+
+  if (datos.length < 2) {
+    document.getElementById("estudioResultado").innerHTML =
+      `<div class="alert">
+        Se necesitan al menos dos mediciones con PPV y distancia
+        para realizar un estudio preliminar.
+       </div>`;
+    return;
+  }
+
+  const xs = datos.map(m => Math.log(m.distancia));
+  const ys = datos.map(m => Math.log(m.ppv));
+
+  const xmean = xs.reduce((a,b) => a+b, 0) / xs.length;
+  const ymean = ys.reduce((a,b) => a+b, 0) / ys.length;
+
+  let num = 0, den = 0;
+
+  for (let i = 0; i < xs.length; i++) {
+    num += (xs[i] - xmean) * (ys[i] - ymean);
+    den += (xs[i] - xmean) ** 2;
+  }
+
+  const B = num / den;
+  const lnA = ymean - B * xmean;
+  const A = Math.exp(lnA);
+
+  let ssTot = 0, ssRes = 0;
+
+  for (let i = 0; i < xs.length; i++) {
+    const pred = lnA + B * xs[i];
+    ssTot += (ys[i] - ymean) ** 2;
+    ssRes += (ys[i] - pred) ** 2;
+  }
+
+  const r2 = ssTot === 0 ? 1 : 1 - ssRes / ssTot;
+
+  document.getElementById("estudioResultado").innerHTML = `
+    <div class="result-grid">
+      <div class="metric"><div class="label">Nº puntos</div><div class="value">${datos.length}</div></div>
+      <div class="metric"><div class="label">A</div><div class="value">${fmt(A,4)}</div></div>
+      <div class="metric"><div class="label">B</div><div class="value">${fmt(B,4)}</div></div>
+      <div class="metric"><div class="label">R²</div><div class="value">${fmt(r2,4)}</div></div>
+    </div>
+    <div class="card" style="margin-top:15px;background:#f8fafc">
+      <h3>Ley ajustada</h3>
+      <p style="font-size:18px;text-align:center">
+        <b>PPV = ${fmt(A,4)} × D<sup>${fmt(B,4)}</sup></b>
+      </p>
+      <p class="help">
+        Ajuste logarítmico preliminar realizado sobre las mediciones disponibles.
+        Para estudios reglamentarios deberá utilizarse la metodología y tratamiento
+        de datos que corresponda al estudio técnico de vibraciones.
+      </p>
+    </div>
+  `;
+}
+
+</script>
+<script>
+
+/* ==========================================================
+   JSON — EXPORTAR / IMPORTAR
+   ========================================================== */
+
+function descargarBlob(blob, nombre) {
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+
+  a.href = url;
+  a.download = nombre;
+
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+
+function exportJSON() {
+
+  const blob = new Blob(
+    [JSON.stringify(mediciones, null, 2)],
+    { type: "application/json" }
+  );
+
+  descargarBlob(blob, "backup_vibraciones_din4150_3.json");
+}
+
+
+async function importJSONFile(event) {
+
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = async function() {
+
+    try {
+
+      const data = JSON.parse(reader.result);
+
+      if (!Array.isArray(data))
+        throw new Error("Formato incorrecto");
+
+      if (!confirm("Esto reemplazará las mediciones actuales. ¿Continuar?"))
+        return;
+
+      mediciones = data.map(m => {
+        const linea = normalizarLinea(m.linea || m.grupo || "II");
+        return {
+          ...m,
+          linea,
+          grupo: linea,
+          modoDIN: m.modoDIN || normalizarModoDIN(null, m.ubicacion),
+          materialCavidad: m.materialCavidad || "hormigon_armado",
+          materialTuberia: m.materialTuberia || "acero_soldado",
+          valorFiltrado: m.valorFiltrado ?? null
+        };
+      });
+
+      await saveData();
+
+      renderHistorial();
+      actualizarDashboard();
+
+      alert("Backup restaurado.");
+
+    } catch(e) {
+      alert("No se pudo importar el archivo JSON.\n" + e.message);
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+
+/* ==========================================================
+   BORRAR TODO
+   ========================================================== */
+
+async function borrarTodo() {
+
+  if (!confirm(
+    "ATENCIÓN: se eliminarán todas las mediciones " +
+    "guardadas en este dispositivo.\n\n" +
+    "¿Continuar?"
+  )) return;
+
+  mediciones = [];
+
+  await saveData();
+
+  renderHistorial();
+  actualizarDashboard();
+
+  alert("Datos eliminados.");
+}
+
+
+/* ==========================================================
+   FECHA ACTUAL
+   ========================================================== */
+
+function establecerFechaActual() {
+
+  const ahora = new Date();
+
+  const yyyy = ahora.getFullYear();
+  const mm = String(ahora.getMonth() + 1).padStart(2, "0");
+  const dd = String(ahora.getDate()).padStart(2, "0");
+
+  document.getElementById("fecha").value = `${yyyy}-${mm}-${dd}`;
+  document.getElementById("hora").value =
+    String(ahora.getHours()).padStart(2, "0") + ":" +
+    String(ahora.getMinutes()).padStart(2, "0");
+}
+
+
+/* ==========================================================
+   INFORME — CON DESCRIPCIÓN COMPLETA, TABLA 4 Y NOTAS
+   ========================================================== */
+
+function verInforme(id) {
+
+  const m = mediciones.find(x => x.id === id);
+  if (!m) return;
+
+  medicionSeleccionada = m;
+
+  generarInforme(m);
+
+  showTab("tab-informe", document.querySelectorAll("nav button")[6]);
+}
+
+
+function generarInforme(m) {
+
+  const mLinea = normalizarLinea(m.linea || m.grupo || "II");
+  const modo = m.modoDIN || normalizarModoDIN(null, m.ubicacion);
+  const config = DIN_MODOS[modo];
+
+  const r = evaluar(
+    mLinea,
+    m.frecuencia,
+    m.ppv,
+    modo,
+    m.ubicacion,
+    {
+      materialCavidad: m.materialCavidad,
+      materialTuberia: m.materialTuberia,
+      valorFiltrado: m.valorFiltrado
+    }
+  );
+
+  const pct = r.limite ? (m.ppv / r.limite) * 100 : null;
+
+  const fechaSave = m.creado ? new Date(m.creado) : null;
+  let fechaGeneracionCompleta;
+
+  if (fechaSave && !isNaN(fechaSave.getTime())) {
+    const fechaGeneracion = fechaSave.toLocaleDateString('es-ES');
+    const horaGeneracion = fechaSave.toLocaleTimeString('es-ES', {
+      hour: '2-digit', minute: '2-digit'
+    });
+    fechaGeneracionCompleta = `${fechaGeneracion} · ${horaGeneracion}`;
+  } else {
+    fechaGeneracionCompleta = 'Fecha no disponible';
+  }
+
+  const pdfGeneradoEl = document.getElementById('pdf-generado');
+  if (pdfGeneradoEl) pdfGeneradoEl.textContent = fechaGeneracionCompleta;
+
+  const pdfProyectoEl = document.getElementById('pdf-proyecto');
+  if (pdfProyectoEl && m.explotacion) pdfProyectoEl.textContent = m.explotacion;
+
+  // Detectar categoría del modo
+  const esLargaDuracion = (modo === "piso_superior_larga" || modo === "losa_larga");
+  const esCavidad = (modo === "cavidad_subterranea");
+  const esTuberia = (modo === "tuberia_corta" || modo === "tuberia_larga");
+  const esMasivo = (modo === "elementos_masivos");
+  const esAnexoB = (modo === "fundacion_corta_anexoB");
+  const esArranque = (modo === "arranque_parada");
+
+  // ============================================================
+  // TABLA 1 — CORTA DURACIÓN (EDIFICIOS)
+  // ============================================================
+  const tabla1HTML = `
+    <table style="margin-top:10px;margin-bottom:12px">
+      <thead>
+        <tr>
+          <th>Línea / Tipo de estructura</th>
+          <th>1 Hz a 10 Hz</th>
+          <th>10 Hz a 50 Hz</th>
+          <th>50 Hz a 100 Hz (*)</th>
+          <th>Piso más alto (horiz.)</th>
+          <th>Losa de piso (vert.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Línea I:</b> Edificios comerciales e industriales</td>
+          <td>20 mm/s</td>
+          <td>20 a 40 mm/s</td>
+          <td>40 a 50 mm/s</td>
+          <td>40 mm/s</td>
+          <td>20 mm/s</td>
+        </tr>
+        <tr>
+          <td><b>Línea II:</b> Viviendas y edificios similares</td>
+          <td>5 mm/s</td>
+          <td>5 a 15 mm/s</td>
+          <td>15 a 20 mm/s</td>
+          <td>15 mm/s</td>
+          <td>20 mm/s</td>
+        </tr>
+        <tr>
+          <td><b>Línea III:</b> Estructuras sensibles / catalogadas</td>
+          <td>3 mm/s</td>
+          <td>3 a 8 mm/s</td>
+          <td>8 a 10 mm/s</td>
+          <td>8 mm/s</td>
+          <td>20 mm/s <sup>b</sup></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#667085">
+      (*) Para frecuencias superiores a 100 Hz se adoptan como valores mínimos los
+      especificados en la columna 50–100 Hz (50, 20 y 10 mm/s respectivamente).
+      Entre 10–50 Hz y 50–100 Hz la norma establece una variación lineal continua
+      en función de la frecuencia registrada en la cimentación.
+      <br>
+      <sup>b</sup> Para Línea III, cláusula 5.1.2: podrá ser necesario rebajar
+      notablemente el valor guía para evitar daño menor.
+    </p>
+  `;
+
+  // ============================================================
+  // TABLA 4 — LARGA DURACIÓN
+  // ============================================================
+  const tabla4HTML = `
+    <table style="margin-top:10px;margin-bottom:12px">
+      <thead>
+        <tr>
+          <th>Línea / Tipo de estructura</th>
+          <th>Piso superior horizontal (mm/s)</th>
+          <th>Losa de piso vertical (mm/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Línea I:</b> Edificios comerciales e industriales</td>
+          <td>10 mm/s</td>
+          <td>10 mm/s</td>
+        </tr>
+        <tr>
+          <td><b>Línea II:</b> Viviendas y edificios similares</td>
+          <td>5 mm/s</td>
+          <td>10 mm/s</td>
+        </tr>
+        <tr>
+          <td><b>Línea III:</b> Estructuras sensibles / catalogadas</td>
+          <td>2,5 mm/s</td>
+          <td>10 mm/s <sup>a</sup></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#667085">
+      Los valores guía para vibraciones de larga duración son más restrictivos que
+      los de corta duración, ya que consideran la acumulación de efectos sobre la
+      estructura a lo largo del tiempo. La columna de piso superior se aplica a la
+      componente horizontal del piso más alto. La columna de losa de piso se aplica
+      a la componente vertical de la losa.
+      <br>
+      <sup>a</sup> Para Línea III, cláusula 6.1.2: podrá ser necesario rebajar
+      notablemente el valor guía para evitar daño menor.
+    </p>
+  `;
+
+  // ============================================================
+  // TABLA 2 — CAVIDADES SUBTERRÁNEAS
+  // ============================================================
+  const tabla2HTML = `
+    <table style="margin-top:10px;margin-bottom:12px">
+      <thead>
+        <tr>
+          <th>Línea</th>
+          <th>Material del revestimiento</th>
+          <th>Valor guía v<sub>i,max</sub> (mm/s) perpendicular a la superficie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Hormigón armado o proyectado, dovelas</td>
+          <td>80 mm/s</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Hormigón, piedra</td>
+          <td>60 mm/s</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mampostería (fábrica)</td>
+          <td>40 mm/s</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#667085">
+      <b>Nota:</b> Los valores guía se obtuvieron durante voladuras mineras cercanas
+      y aplican únicamente al revestimiento de la estructura subterránea, no a las
+      instalaciones asociadas. Se asume que el revestimiento ha sido fabricado y
+      aplicado con tecnología actual.
+    </p>
+  `;
+
+  // ============================================================
+  // TABLA 3 — TUBERÍAS ENTERRADAS
+  // ============================================================
+  const tabla3HTML = `
+    <table style="margin-top:10px;margin-bottom:12px">
+      <thead>
+        <tr>
+          <th>Línea</th>
+          <th>Material de la tubería</th>
+          <th>Valor guía v<sub>i,max</sub> corta duración (mm/s)</th>
+          <th>Valor guía v<sub>i,max</sub> larga duración (mm/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Acero soldado</td>
+          <td>100 mm/s</td>
+          <td>50 mm/s</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Arcilla vitrificada, hormigón, hormigón armado, pretensado, metal (con o sin brida)</td>
+          <td>80 mm/s</td>
+          <td>40 mm/s</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mampostería, plásticos</td>
+          <td>50 mm/s</td>
+          <td>25 mm/s</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#667085">
+      Los valores guía para larga duración se obtienen reduciendo un 50 % los de
+      corta duración (cláusula 6.2). Las tuberías de drenaje se evalúan con los
+      valores de la línea 3. Los valores guía de cimentación también aplican a los
+      primeros 2 m (los más próximos al edificio) de las tuberías de acometida.
+    </p>
+  `;
+
+  // ============================================================
+  // TABLA B.1 — ANEXO B
+  // ============================================================
+  const tablaB1HTML = `
+    <table style="margin-top:10px;margin-bottom:12px">
+      <thead>
+        <tr>
+          <th>Línea</th>
+          <th>Tipo de edificio</th>
+          <th>Filtro según DIN 45669-1</th>
+          <th>Valor guía v<sub>iBn,max</sub> (mm/s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Edificios comerciales, industriales y de diseño similar</td>
+          <td>H<sub>vB1</sub></td>
+          <td>20 mm/s</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Viviendas y edificios de diseño y/u ocupación similar</td>
+          <td>H<sub>vB2</sub></td>
+          <td>5 mm/s</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Estructuras especialmente sensibles y de gran valor intrínseco</td>
+          <td>H<sub>vB3</sub></td>
+          <td>3 mm/s</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:11px;color:#667085">
+      El método del Anexo B es un método alternativo de evaluación en tiempo real:
+      se filtra la señal con los filtros de ponderación de frecuencia de la
+      DIN 45669-1 (Anexo E) y el valor máximo filtrado se compara directamente
+      con los valores guía constantes de esta tabla. Es equivalente al método
+      principal de la Tabla 1.
+    </p>
+  `;
+
+  // ============================================================
+  // SELECCIÓN DE LA TABLA DE REFERENCIA
+  // ============================================================
+  let tablaReferenciaHTML = tabla1HTML;
+  let tituloTabla = "6.1. Tabla 1 — Valores guía para vibraciones de corta duración";
+
+  if (esLargaDuracion) {
+    tablaReferenciaHTML = tabla4HTML;
+    tituloTabla = "6.1. Tabla 4 — Valores guía para vibraciones de larga duración";
+  }
+  else if (esCavidad) {
+    tablaReferenciaHTML = tabla2HTML;
+    tituloTabla = "6.1. Tabla 2 — Valores guía para cavidades subterráneas";
+  }
+  else if (esTuberia) {
+    tablaReferenciaHTML = tabla3HTML;
+    tituloTabla = "6.1. Tabla 3 — Valores guía para tuberías enterradas";
+  }
+  else if (esAnexoB) {
+    tablaReferenciaHTML = tablaB1HTML;
+    tituloTabla = "6.1. Tabla B.1 — Método alternativo por filtrado (Anexo B)";
+  }
+  else if (esMasivo) {
+    tablaReferenciaHTML = `
+      <div class="alert-info">
+        <b>Cláusula 5.2 — Elementos estructurales masivos:</b><br>
+        Para estructuras de ingeniería civil como estribos de hormigón armado o
+        bloques de cimentación, se aplica un valor guía fijo de <b>80 mm/s</b>,
+        independiente de la frecuencia, siempre que no existan riesgos derivados
+        de procesos mecánicos del terreno.
+      </div>
+    `;
+    tituloTabla = "6.1. Cláusula 5.2 — Elementos estructurales masivos";
+  }
+  else if (esArranque) {
+    tablaReferenciaHTML = `
+      <div class="alert-info">
+        <b>Cláusula 6.3 — Operaciones de arranque y parada de maquinaria:</b><br>
+        En el caso de operaciones de arranque y parada de maquinaria de construcción
+        o similares, se permite que la velocidad de vibración exceda los valores
+        guía de la Tabla 4, ya que el exceso es solo transitorio. La evaluación se
+        realiza contra los valores de la Tabla 1, columnas 5 y 6 (piso superior
+        horizontal y losa de piso vertical).
+      </div>
+    `;
+    tituloTabla = "6.1. Cláusula 6.3 — Arranque y parada de maquinaria";
+  }
+
+  // ============================================================
+  // NOTA ESPECÍFICA PARA LÍNEA I (CLÁUSULA 4.5)
+  // ============================================================
+  let notaLIneaIHTML = "";
+  if (mLinea === "I") {
+    notaLIneaIHTML = `
+      <div class="alert-nota-tecnica">
+        <b>Nota técnica (cláusula 4.5):</b> Para edificios de Línea I
+        (comerciales / industriales), la norma DIN 4150-3:2016-12 establece que
+        el "daño menor" (fisuras en revestimientos, etc.) <b>NO se considera
+        reducción de la habitabilidad o servicio</b> de la estructura.
+      </div>
+    `;
+  }
+
+  // ============================================================
+  // NOTA TÉCNICA ESPECÍFICA (LÍNEA III EN LOSA)
+  // ============================================================
+  let notaTecnicaHTML = "";
+  if (r.notaTecnica) {
+    notaTecnicaHTML = `
+      <div class="alert-nota-tecnica">
+        <b>Nota técnica:</b> ${esc(r.notaTecnica)}
+      </div>
+    `;
+  }
+
+  // ============================================================
+  // INFORMACIÓN ADICIONAL DE MATERIALES
+  // ============================================================
+  let materialInfoHTML = "";
+
+  if (esCavidad && m.materialCavidad) {
+    const mat = MATERIALES_CAVIDAD[m.materialCavidad];
+    if (mat) {
+      materialInfoHTML = `
+        <p><b>Material del revestimiento:</b> ${esc(mat.etiqueta)}
+        <span style="font-size:11px;color:#667085">(${esc(mat.descripcion)})</span></p>
+      `;
+    }
+  }
+
+  if (esTuberia && m.materialTuberia) {
+    const mat = MATERIALES_TUBERIA[m.materialTuberia];
+    if (mat) {
+      materialInfoHTML = `
+        <p><b>Material de la tubería:</b> ${esc(mat.etiqueta)}
+        <span style="font-size:11px;color:#667085">(${esc(mat.descripcion)})</span></p>
+      `;
+    }
+  }
+
+  if (esAnexoB && m.valorFiltrado !== null && m.valorFiltrado !== undefined) {
+    materialInfoHTML = `
+      <p><b>Valor filtrado registrado:</b> ${fmt(m.valorFiltrado)} mm/s
+      <span style="font-size:11px;color:#667085">(DIN 45669-1, Anexo E)</span></p>
+    `;
+  }
+
+  // ============================================================
+  // INFORME COMPLETO
+  // ============================================================
+  document.getElementById("informeDatos").innerHTML = `
+
+    <h3>1. Identificación</h3>
+
+    <table>
+      <tr>
+        <td><b>Voladura</b></td>
+        <td>${esc(m.voladura)}</td>
+        <td><b>Fecha</b></td>
+        <td>${esc(m.fecha)}</td>
+      </tr>
+      <tr>
+        <td><b>Hora</b></td>
+        <td>${esc(m.hora)}</td>
+        <td><b>Explotación</b></td>
+        <td>${esc(m.explotacion)}</td>
+      </tr>
+      <tr>
+        <td><b>Punto</b></td>
+        <td>${esc(m.punto)}</td>
+        <td><b>Distancia</b></td>
+        <td>${fmt(m.distancia)} m</td>
+      </tr>
+      <tr>
+        <td><b>Estructura</b></td>
+        <td>${esc(m.estructura)}</td>
+        <td><b>Línea DIN 4150-3</b></td>
+        <td>${esc(LINEA_DESCRIPCION_CORTA[mLinea])}</td>
+      </tr>
+      <tr>
+        <td><b>Descripción completa</b></td>
+        <td colspan="3">${esc(LINEA_DESCRIPCION[mLinea])}</td>
+      </tr>
+      <tr>
+        <td><b>Modo de evaluación</b></td>
+        <td colspan="3">${esc(r.modoEtiqueta || modo)}</td>
+      </tr>
+    </table>
+
+    ${notaLIneaIHTML}
+
+
+    <h3>2. Datos de la voladura</h3>
+
+    <table>
+      <tr>
+        <td><b>Carga total</b></td>
+        <td>${fmt(m.cargaTotal)} kg</td>
+        <td><b>Carga máxima instantánea</b></td>
+        <td>${fmt(m.cargaMIC)} kg</td>
+      </tr>
+      <tr>
+        <td><b>Nº barrenos</b></td>
+        <td>${fmt(m.barrenos,0)}</td>
+        <td><b>Secuencias</b></td>
+        <td>${esc(m.secuencias)}</td>
+      </tr>
+    </table>
+
+
+    <h3>3. Instrumentación</h3>
+
+    <table>
+      <tr>
+        <td><b>Fabricante</b></td>
+        <td>${esc(m.fabricante)}</td>
+        <td><b>Modelo</b></td>
+        <td>${esc(m.modelo)}</td>
+      </tr>
+      <tr>
+        <td><b>Nº serie</b></td>
+        <td>${esc(m.serie)}</td>
+        <td><b>Método de frecuencia</b></td>
+        <td>${esc(m.metodoFrecuencia)}</td>
+      </tr>
+    </table>
+
+
+    <h3>4. Resultados de la medición</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Símbolo</th>
+          <th>PPV (mm/s)</th>
+          <th>Observación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vertical</td>
+          <td style="color:#e53935;font-size:18px;font-weight:bold;">★</td>
+          <td>${fmt(m.vertical)}</td>
+          <td>${m.componente === "Vertical" ? "<b>Componente evaluada</b>" : ""}</td>
+        </tr>
+        <tr>
+          <td>Longitudinal</td>
+          <td style="color:#16803c;font-size:18px;font-weight:bold;">■</td>
+          <td>${fmt(m.longitudinal)}</td>
+          <td>${m.componente === "Longitudinal" ? "<b>Componente evaluada</b>" : ""}</td>
+        </tr>
+        <tr>
+          <td>Transversal</td>
+          <td style="color:#9b59b6;font-size:18px;font-weight:bold;">✕</td>
+          <td>${fmt(m.transversal)}</td>
+          <td>${m.componente === "Transversal" ? "<b>Componente evaluada</b>" : ""}</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div style="
+      margin-top:20px;
+      padding:20px;
+      border:2px solid ${
+        r.estado === "green" ? "#16803c" :
+        r.estado === "orange" ? "#b56a00" :
+        r.estado === "red" ? "#b42318" : "#667085"
+      };
+      border-radius:10px;
+      page-break-inside:avoid;
+    ">
+      <h2 style="margin-top:0">RESULTADO: ${esc(r.texto)}</h2>
+
+      <p><b>PPV máxima evaluada:</b> ${fmt(m.ppv)} mm/s</p>
+      <p><b>Componente evaluada:</b> ${esc(m.componente)}</p>
+      <p><b>Frecuencia principal:</b> ${m.frecuencia === null ? "No requerida" : fmt(m.frecuencia) + " Hz"}</p>
+      <p><b>Línea DIN 4150-3:</b> ${esc(LINEA_DESCRIPCION[mLinea])}</p>
+      <p><b>Modo:</b> ${esc(r.modoEtiqueta || modo)}</p>
+      <p><b>Criterio aplicado:</b> ${esc(r.tipo)}</p>
+      <p><b>Valor guía:</b> ${r.limite === null ? "No disponible" : fmt(r.limite) + " mm/s"}</p>
+      <p><b>Relación PPV/valor guía:</b> ${pct === null ? "—" : fmt(pct,1) + " %"}</p>
+      ${materialInfoHTML}
+    </div>
+
+    ${notaTecnicaHTML}
+
+
+    <h3>5. Observaciones</h3>
+
+    <p>${esc(m.observaciones)}</p>
+
+
+    <h3>6. Criterio de evaluación — DIN 4150-3:2016-12</h3>
+
+    <p>
+      La evaluación se ha realizado conforme a la norma <b>DIN 4150-3:2016-12</b>
+      (Vibraciones en la edificación — Parte 3: Efectos sobre las estructuras).
+      Se ha considerado la línea de estructura, el modo de evaluación y la
+      componente dominante de velocidad de vibración.
+    </p>
+
+    ${esAnexoB ? `
+      <p>
+        <b>Método Anexo B:</b> se ha utilizado el método alternativo por filtrado
+        en frecuencia según la norma DIN 45669-1, Anexo E. El valor filtrado
+        v<sub>iBn,max</sub> se compara directamente contra los valores guía
+        constantes de la Tabla B.1. Este método es equivalente al método principal
+        de la Tabla 1 y es especialmente adecuado para evaluación en tiempo real.
+      </p>
+    ` : ""}
+
+    ${esMasivo ? `
+      <p>
+        <b>Elementos estructurales masivos:</b> la evaluación se ha realizado
+        conforme a la cláusula 5.2, aplicando el valor guía fijo de 80 mm/s para
+        estructuras de ingeniería civil tales como estribos de hormigón armado o
+        bloques de cimentación.
+      </p>
+    ` : ""}
+
+    ${esCavidad ? `
+      <p>
+        <b>Cavidades subterráneas:</b> la evaluación se ha realizado conforme a
+        la cláusula 5.2, aplicando los valores guía de la Tabla 2 para el
+        revestimiento de túneles, galerías y cavidades en roca. Los valores se
+        miden perpendiculares a la superficie del revestimiento.
+      </p>
+    ` : ""}
+
+    ${esTuberia ? `
+      <p>
+        <b>Tuberías enterradas:</b> la evaluación se ha realizado conforme a la
+        cláusula 5.3 (corta duración) o cláusula 6.2 (larga duración), aplicando
+        los valores guía de la Tabla 3 según el material de la tubería.
+        ${modo === "tuberia_larga" ? "Para larga duración se ha aplicado la reducción del 50% prevista en la cláusula 6.2." : ""}
+      </p>
+    ` : ""}
+
+    ${esArranque ? `
+      <p>
+        <b>Arranque/parada de maquinaria:</b> conforme a la cláusula 6.3, durante
+        las operaciones de arranque y parada de maquinaria de construcción se
+        permite que la velocidad de vibración exceda los valores guía de la
+        Tabla 4, evaluándose contra los valores de corta duración (Tabla 1,
+        columnas 5 y 6).
+      </p>
+    ` : ""}
+
+    ${!esLargaDuracion && !esCavidad && !esTuberia && !esMasivo && !esAnexoB && !esArranque ? `
+      <p>
+        En el modo <b>corta duración — cimentación</b>, se utiliza el máximo de las
+        tres componentes (vertical, longitudinal y transversal) y el valor guía
+        dependiente de la frecuencia de la <b>Tabla 1</b>. Para 10–50 Hz y 50–100 Hz
+        se realiza interpolación lineal; por encima de 100 Hz se aplica como mínimo
+        el valor correspondiente a 100 Hz.
+      </p>
+
+      <p>
+        En los modos de <b>piso superior</b> se consideran las dos componentes
+        horizontales; en los modos de <b>losa de piso</b> se considera la componente
+        vertical. Los modos de <b>larga duración</b> utilizan los valores guía
+        correspondientes de la <b>Tabla 4</b>, más restrictivos que los de corta
+        duración.
+      </p>
+    ` : ""}
+
+    <h3>${tituloTabla}</h3>
+
+    ${tablaReferenciaHTML}
+
+    <p style="font-size:11px;color:#667085;margin-top:12px">
+      <b>Nota preventiva:</b> el estado de "VIGILANCIA — ≥ 80 %" es un indicador
+      interno de esta herramienta que se activa automáticamente cuando la medición
+      alcanza o supera el 80 % del valor guía admisible de la norma DIN 4150-3.
+      No constituye una categoría normativa adicional.
+    </p>
+
+    <hr>
+
+    <p style="font-size:11px;color:#667085">
+      Documento generado mediante Control de Vibraciones SICONVOL — DIN 4150-3:2016-12.
+      Este informe debe ser revisado por personal técnicamente competente antes
+      de su utilización con finalidad oficial o reglamentaria.
+    </p>
+  `;
+}
+
+
+/* ==========================================================
+   IMPRIMIR / PDF
+   ========================================================== */
+
+function imprimirConGrafica() {
+
+  ocultarTooltip();
+
+  setTimeout(function() {
+    dibujarGrafica();
+    setTimeout(function() {
+      window.print();
+    }, 200);
+  }, 150);
+}
+
+
+/* ==========================================================
+   TEMA
+   ========================================================== */
+
+function initTheme() {
+  const saved = localStorage.getItem('SICONVOL_THEME') || 'light';
+  setTheme(saved);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  const next = current === 'dark' ? 'light' : 'dark';
+  setTheme(next);
+}
+
+function setTheme(theme) {
+
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('SICONVOL_THEME', theme);
+
+  const icon = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
+  const meta = document.getElementById('themeMeta');
+  const logo = document.querySelector('.header-logo');
+
+  if (logo) logo.src = 'lemostransparente.png';
+
+  if (icon && label) {
+    if (theme === 'dark') {
+      icon.textContent = '🌙';
+      label.textContent = 'Modo Oscuro';
+      if (meta) meta.setAttribute('content', '#060911');
+    } else {
+      icon.textContent = '☀️';
+      label.textContent = 'Modo Claro';
+      if (meta) meta.setAttribute('content', '#0a101c');
+    }
+  }
+}
+
+initTheme();
+
+
+/* ==========================================================
+   EVENTOS RESIZE / PRINT
+   ========================================================== */
+
+window.addEventListener("resize", () => {
+  if (document.getElementById("tab-grafica").classList.contains("active")) {
+    dibujarGrafica();
+  }
+});
+
+window.addEventListener('beforeprint', function () {
+  ocultarTooltip();
+  dibujarGrafica();
+});
+
+
+/* ==========================================================
+   INICIO
+   ========================================================== */
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+  initTheme();
+
+  await initDB();
+
+  establecerFechaActual();
+
+  actualizarDashboard();
+
+  renderHistorial();
+
+  // Inicializar campos condicionales según el modo por defecto
+  actualizarCamposCondicionales();
+
+  setTimeout(function () {
+    dibujarGrafica();
+  }, 100);
+});
+
+</script>
+
+</body>
+</html>
